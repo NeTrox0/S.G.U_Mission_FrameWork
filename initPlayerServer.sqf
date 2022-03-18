@@ -1,0 +1,1 @@
+//initPlayerServer.sqf//Executed only on server when a player joins mission (includes both mission start and JIP). {    _x addCuratorEditableObjects [[_this select 0],true];} forEach allCurators;
