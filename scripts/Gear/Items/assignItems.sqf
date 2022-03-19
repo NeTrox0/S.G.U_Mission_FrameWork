@@ -1,9 +1,10 @@
 /*
 *	Select Items, 
-*	Requires: N / A
+*	Requires: RHS
 *	
 *	Parameters:
 *	Player,
+*	role
 *
 *	By Trox
 */
