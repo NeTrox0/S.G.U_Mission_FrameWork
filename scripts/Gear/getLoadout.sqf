@@ -20,6 +20,9 @@ _camo = param [2, 9];
 //systemchat format ["Roll: %1", _role];
 
 
+if (side player == sideLogic) exitWith {systemchat "No Gear for Virtual Zeus";};
+
+
 if (_camo == 9) then {
 	_camo = ["Gear_Camo", 0] call BIS_fnc_getParamValue;
 	//systemchat format ["LOG.2.Cammo: %1", _camo];
