@@ -50,7 +50,9 @@ switch (_role) do {
 		for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
 		_unit addItemToBackpack "ACE_MX2A";
 	};
-	case ("VC");
+	case ("VC"): {
+		for "_i" from 1 to 3 do {_unit addItemToVest "ACE_Chemlight_HiYellow";};
+	};
 	case ("SIGN"): {
 		for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
 	};
