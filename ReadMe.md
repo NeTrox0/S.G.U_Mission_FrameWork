@@ -17,36 +17,36 @@ Trox
 
 **Command Roles**
 - PLTC
-- GRPC    GRT
+- GRPC (GRT)
 - GRPC2
 
 **Group Roles**
-- SIGN  Signalist
+- SIGN (Signalist)
 - SJV
-- SJV2  SJV Lätt
-- SJV3  SJV & Skarpskytt
+- SJV2 (SJV Lätt)
+- SJV3 (SJV & Skarpskytt)
 - KSP90
 - KSP58
 - GRG
 - GRT
-- SOLD  Sk.sold
-- SOLD2 sk.sold AT4
-- SOLD3 sk.sold RB57
-- ING   Ingenjör
-- FARB  Fältarbetare
-- SKRP  Skarpskytt
+- SOLD (Sk.sold)
+- SOLD2 (sk.sold AT4)
+- SOLD3 (sk.sold RB57)
+- ING (Ingenjör)
+- FARB (Fältarbetare)
+- SKRP (Skarpskytt)
 - UAV
-- PRSK  Prickskytt
+- PRSK (Prickskytt)
 
 **Assist Roles**
-- GRGA  GRG ASS
+- GRGA (GRG ASS)
 
 **Pilots**
-- HPIL  HeloPilot
-- JPIL  JetPilot
+- HPIL (HkpPilot)
+- JPIL (JetPilot)
 
 **Vehicle Crew**
-- VC    VagnsChef
-- CREW  Besättning
-- CREW2 Besättning SJV
-- CREW3 Besättning ING
+- VC (Vagn.C)
+- CREW (Besättning)
+- CREW2 (Besättning SJV)
+- CREW3 (Besättning ING)
