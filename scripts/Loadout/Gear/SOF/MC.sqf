@@ -1,7 +1,7 @@
 /*
 *	Select the correct items for Cammo and Role
 *	See the ReadME for accepted roles and cammos
-*	Requires: SFP, SGU, ACE, ILBE
+*	Requires: VSM, ILBE
 *	
 *	Parameters: _role
 *
@@ -9,29 +9,27 @@
 */
 
 //HELMET
-_Helmet = "sfp_m90d_helmet_peltor_nvg";
+_Helmet = "";
+_HelmetArr = ["VSM_OPS_Multicam","VSM_OPS_2_Multicam"];
 _HelmetJPilot = "H_PilotHelmetFighter_B";
 _HelmetHPilot = "H_PilotHelmetHeli_B";
-_HelmetCrewArr = ["rhsusf_cvc_alt_helmet","rhsusf_cvc_ess"];
+_HelmetCrewArr = ["rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"];
 
 //UNIFORM
-_Uniform = "";
-_UniformArr = ["sfp_m90d_uniform_fs18", "sfp_m90d_uniform", "sfp_m90d_uniform_long_m08", "sfp_m90d_uniform_folded"];
-_UniformJPilot = "U_B_PilotCoveralls";
+_Uniform = "VSM_Multicam_Crye_Camo";
+_Uniform_JPilot = "U_B_PilotCoveralls";
 
 //VEST
-_Vest = "";
-_VestArr = ["SGU_Carrier_Rig_Tan", "SGU_Carrier_Rig_Lite_Tan", "SGU_Carrier_Rig_Name_Tan"];
+_Vest = "VSM_LBT6094_operator_Multicam";
+_VestKSP = "VSM_LBT6094_MG_Multicam";
 _VestHPilot = "V_TacVest_blk";
 _VestCrew = "V_TacVest_blk";
 
 //BACKPACK
-_Backpack = "SGU_Assault_Pack_Tan";
-_BackpackSjv = "SGU_Assault_Pack_Medic_Tan";
-_BackpackKit = "SGU_Kitbag_Tan";
-_BackpackKitSjv = "SGU_Kitbag_Medic_Tan";
+_Backpack = "VSM_Multicam_Backpack_Compact";
+_BackpackSjv = "VSM_Multicam_Backpack_Kitbag";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpC = "tfw_ilbe_whip_coy";
+_BackpackGrpC = "tfw_ilbe_whip_mc";
 _BackpackPrsk = "ace_gunbag_Tan";
 
 //***************************************************************//
@@ -54,7 +52,9 @@ switch (_role) do {
 	case ("CREW3"): {
 		_Helmet = selectRandom _HelmetCrewArr;
 	};
-	default {};
+	default {
+		_Helmet = selectRandom _HelmetArr;
+	};
 };
 
 
@@ -63,9 +63,7 @@ switch (_role) do {
 	case ("JPIL"): {
 		_Uniform = _UniformJPilot;
 	};
-	default {
-		_Uniform = selectRandom _UniformArr;
-	};
+	default {};
 };
 
 
@@ -81,9 +79,11 @@ switch (_role) do {
 	case ("CREW3"): {
 		_Vest = _VestCrew;
 	};
-	default {
-		_Vest = selectRandom _VestArr;
+	case ("KSP90");
+	case ("KSP58"): {
+		_Vest = _VestKSP;
 	};
+	default {};
 };
 
 
@@ -93,17 +93,14 @@ switch (true) do {
 		_Backpack = _BackpackGrpC;
 	};
 	case (_role == "HPIL"): {};
-	case (_role == "SJV"): {
-		_Backpack = _BackpackKitSjv;
-	};
+	case (_role == "FARB");
+	case (_role == "GRGA");
+	case (_role == "SJV");
 	case (_role == "SJV2");
+	case (_role == "SJV3");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};
-	case (_role == "GRGA");
-	case (_role == "FARB"): {
-		_Backpack = _BackpackKit;
-	};	
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};

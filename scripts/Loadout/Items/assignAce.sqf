@@ -36,7 +36,7 @@ if (_role == "FARB") then {
 switch (_role) do {
 	case ("PRSK");
 	case ("SKRP");
-	case ("SJV2"): {
+	case ("SJV3"): {
 		_unit addItemToUniform "ACE_RangeCard";
 		_unit addItemToUniform "ACE_Kestrel4500";
 	};

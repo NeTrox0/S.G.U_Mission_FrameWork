@@ -16,16 +16,16 @@ removeAllAssignedItems _unit;
 //removeGoggles _unit;
 
 //assign the Radio.
-[_unit, _role] execVM "scripts\gear\items\assignRadio.sqf";
+[_unit, _role] execVM "scripts\Loadout\items\assignRadio.sqf";
 
 //assign the base arma items.
-[_unit, _role] execVM "scripts\gear\items\assignItems.sqf";
+[_unit, _role] execVM "scripts\Loadout\items\assignItems.sqf";
 
 //assign ACE items.
-[_unit, _role] execVM "scripts\gear\items\assignAce.sqf";
+[_unit, _role] execVM "scripts\Loadout\items\assignAce.sqf";
 
 //assign ACE medical items.
-[_unit, _role] execVM "scripts\gear\items\assignMedical.sqf";
+[_unit, _role] execVM "scripts\Loadout\items\assignMedical.sqf";
 
 //assign Traits to the unit.
-[_unit, _role] execVM "scripts\gear\items\setAceTraits.sqf";
+[_unit, _role] execVM "scripts\Loadout\items\setAceTraits.sqf";
