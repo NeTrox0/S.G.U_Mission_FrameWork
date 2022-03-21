@@ -6,7 +6,7 @@
 *	2: Attachement selection based on Weapon
 *	3: Ammo selection based on Weapon
 *	
-*	Requires: SFP, RHS-USAF
+*	Requires: SFP, RHS-USAF, RHS-AFRF
 *
 *	Parameters: 
 *	Player, 

@@ -1,9 +1,10 @@
 /*
 *	Select Items, 
-*	Requires: N / A
+*	Requires: RHS
 *	
 *	Parameters:
 *	Player,
+*	role
 *
 *	By Trox
 */
@@ -41,13 +42,17 @@ switch (_role) do {
 	case ("UAV"): {
 		_unit addItemToVest "rhsusf_ANPVS_14";
 	};
-	default {
+	case ("SJV3");
+	case ("SKRP"): {
 		_unit addItemToBackpack "rhsusf_ANPVS_14";
+	};	
+	default {
+		_unit addItemToVest "rhsusf_ANPVS_14";
 	};
 };
 
 
-//Add Binos
+//Add Binos. "AddWeapon" Because Binos can hurt you.. :)
 switch (_role) do {
 	case ("GRPC"); 
 	case ("GRPC2"); 
@@ -59,11 +64,11 @@ switch (_role) do {
 	};
 	case ("PRSK");
 	case ("SKRP");
-	case ("SJV2"): {
+	case ("SJV3"): {
 		_unit addWeapon "Rangefinder";
 	};
 	default {
-		_unit addWeapon "Binocular"; //Because Binos can hurt you.. :)
+		_unit addWeapon "Binocular"; 
 	};
 };
 
@@ -72,10 +77,10 @@ switch (_role) do {
 switch (_role) do { 
 	case ("ING");
 	case ("CREW3"): {
-//		_unit addItemToBackpack "MineDetector";
 		_unit addItemToBackpack "ToolKit";
 	};
 	case ("FARB"): { 
+//		_unit addItemToBackpack "MineDetector";	//Mine detector is given in "assignACE"	
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};

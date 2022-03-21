@@ -17,10 +17,10 @@
 	SGU_Flag addAction ["<t size='1.2' shadow='2' color='#0055FF'>Move To USS-Freedom</t>", "scripts\teleport.sqf", "USS-FREEDOM",1,false,true,"","_this distance _target < 10"];
 
 	//Arsenal
-	[player] execVM "scripts\Gear\Arsenal\selectArsenal.sqf";
+	[player] execVM "scripts\Arsenal\selectArsenal.sqf";
 	
 	//Give unit its gear at start of mission.
-	[player] execVM "scripts\Gear\getLoadout.sqf";
+	[player] execVM "scripts\Loadout\getLoadout.sqf";
 
 
 	//Group Management system. initialize the player side of the framework.

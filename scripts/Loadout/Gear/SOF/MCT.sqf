@@ -1,37 +1,35 @@
 /*
 *	Select the correct items for Cammo and Role
 *	See the ReadME for accepted roles and cammos
-*	Requires: SFP, SGU, ACE, ILBE.
+*	Requires: SAM 3, SGU
 *	
-*	Parameters: _role
+*	Parameters: _unit, _role
 *
 *	By Trox
 */
 
 //HELMET
-_Helmet = "sfp_m90w_helmet_peltor_nvg";
+_Helmet = "";
+_HelmetArr = ["VSM_MulticamTropic_OPS","VSM_MulticamTropic_OPS_2"];
 _HelmetJPilot = "H_PilotHelmetFighter_B";
 _HelmetHPilot = "H_PilotHelmetHeli_B";
 _HelmetCrewArr = ["rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"];
 
 //UNIFORM
-_Uniform = "";
-_UniformArr = ["sfp_m90w_uniform_fs18", "sfp_m90w_uniform_long_m08", "sfp_m90w_uniform_folded", "sfp_m90w_uniform_m08"];
+_Uniform = "VSM_MulticamTropic_Crye_Camo";
 _UniformJPilot = "U_B_PilotCoveralls";
 
 //VEST
-_Vest = "";
-_VestArr = ["SGU_Carrier_Rig", "SGU_Carrier_Rig_Lite", "SGU_Carrier_Rig_Name"];
+_Vest = "VSM_LBT6094_operator_MulticamTropic";
+_VestKSP = "VSM_LBT6094_MG_MulticamTropic";
 _VestHPilot = "V_TacVest_blk";
 _VestCrew = "V_TacVest_blk";
 
 //BACKPACK
-_Backpack = "SGU_Assault_Pack";
-_BackpackSjv = "SGU_Assault_Pack_Medic";
-_BackpackKit = "SGU_Kitbag";
-_BackpackKitSjv = "SGU_Kitbag_Medic";
+_Backpack = "VSM_MulticamTropic_Backpack_Compact";
+_BackpackSjv = "VSM_MulticamTropic_Backpack_Kitbag";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpC = "tfw_ilbe_whip_gr";
+_BackpackGrpC = "tfw_ilbe_whip_mct";
 _BackpackPrsk = "ace_gunbag";
 
 //***************************************************************//
@@ -54,7 +52,9 @@ switch (_role) do {
 	case ("CREW3"): {
 		_Helmet = selectRandom _HelmetCrewArr;
 	};
-	default {};
+	default {
+		_Helmet = selectRandom _HelmetArr;
+	};
 };
 
 
@@ -63,15 +63,15 @@ switch (_role) do {
 	case ("JPIL"): {
 		_Uniform = _UniformJPilot;
 	};
-	default {
-		_Uniform = selectRandom _UniformArr;
-	};
+	default {};
 };
 
 
 //Vest
 switch (_role) do {
-	case ("JPIL"): {};
+	case ("JPIL"): {
+		_Vest = "";
+	};
 	case ("HPIL"): {
 		_Vest = _VestHPilot;
 	};
@@ -81,9 +81,11 @@ switch (_role) do {
 	case ("CREW3"): {
 		_Vest = _VestCrew;
 	};
-	default {
-		_Vest = selectRandom _VestArr;
+	case ("KSP90");
+	case ("KSP58"): {
+		_Vest = _VestKSP;
 	};
+	default {};
 };
 
 
@@ -92,23 +94,27 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC") or (_role == "SIGN"))): {
 		_Backpack = _BackpackGrpC;
 	};
-	case (_role == "HPIL"): {};
-	case (_role == "SJV"): {
-		_Backpack = _BackpackKitSjv;
-	};
-	case (_role == "SJV2");
+	case (_role == "FARB");
+	case (_role == "GRGA");
+	case (_role == "SJV");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};
-	case (_role == "GRGA");
-	case (_role == "FARB"): {
-		_Backpack = _BackpackKit;
-	};	
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
 	case (_role == "PRSK"): {
 		_Backpack = _BackpackPrsk;
+	};
+	case (_role == "SOLD");
+	case (_role == "SOLD2");
+	case (_role == "SOLD3");
+	case (_role == "KSP90");
+	case (_role == "KSP58");
+	case (_role == "CREW");
+	case (_role == "HPIL");
+	case (_role == "JPIL"): {
+		_backpack = "";
 	};	
 	default {};
 };
