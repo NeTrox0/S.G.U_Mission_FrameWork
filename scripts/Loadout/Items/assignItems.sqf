@@ -42,8 +42,12 @@ switch (_role) do {
 	case ("UAV"): {
 		_unit addItemToVest "rhsusf_ANPVS_14";
 	};
-	default {
+	case ("SJV3");
+	case ("SKRP"): {
 		_unit addItemToBackpack "rhsusf_ANPVS_14";
+	};	
+	default {
+		_unit addItemToVest "rhsusf_ANPVS_14";
 	};
 };
 
@@ -73,7 +77,6 @@ switch (_role) do {
 switch (_role) do { 
 	case ("ING");
 	case ("CREW3"): {
-
 		_unit addItemToBackpack "ToolKit";
 	};
 	case ("FARB"): { 

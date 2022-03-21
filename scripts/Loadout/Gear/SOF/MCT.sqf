@@ -69,7 +69,9 @@ switch (_role) do {
 
 //Vest
 switch (_role) do {
-	case ("JPIL"): {};
+	case ("JPIL"): {
+		_Vest = "";
+	};
 	case ("HPIL"): {
 		_Vest = _VestHPilot;
 	};
@@ -92,12 +94,9 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC") or (_role == "SIGN"))): {
 		_Backpack = _BackpackGrpC;
 	};
-	case (_role == "HPIL"): {};
 	case (_role == "FARB");
 	case (_role == "GRGA");
 	case (_role == "SJV");
-	case (_role == "SJV2");
-	case (_role == "SJV3");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};
@@ -106,6 +105,16 @@ switch (true) do {
 	};
 	case (_role == "PRSK"): {
 		_Backpack = _BackpackPrsk;
+	};
+	case (_role == "SOLD");
+	case (_role == "SOLD2");
+	case (_role == "SOLD3");
+	case (_role == "KSP90");
+	case (_role == "KSP58");
+	case (_role == "CREW");
+	case (_role == "HPIL");
+	case (_role == "JPIL"): {
+		_backpack = "";
 	};	
 	default {};
 };

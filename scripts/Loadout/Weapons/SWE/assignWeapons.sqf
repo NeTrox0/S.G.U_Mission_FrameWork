@@ -64,8 +64,12 @@ switch (_primWeapon) do {
 		_unit addPrimaryWeaponItem "sfp_optic_aimpoint";
 	};
 	case ("sfp_ak4d"): {
-		_unit addPrimaryWeaponItem "optic_AMS";
-		_unit addItem "optic_NVS";
+		if (_role == "SJV3") then {
+			_unit addPrimaryWeaponItem "sfp_optic_kikarsikte09_4x";
+		} else {
+			_unit addPrimaryWeaponItem "optic_AMS";
+		};
+		_unit addItemToBackpack "optic_NVS";
 	};
 	case ("rhs_weap_m240G"): {
 		_unit addPrimaryWeaponItem "optic_Hamr";
@@ -107,24 +111,31 @@ switch (_primWeapon) do {
 
 //3: Ammo
 //Primary Ammo
-switch (true) do {
-	case (_role == "GRPC2");
-	case ((_primWeapon == "sfp_ak5c_M203") && !(_role == "GRT")): {
+switch (_role) do {
+	case ("PLTC");
+	case ("GRPC");
+	case ("GRPC2"): {
 		for "_i" from 1 to 8 do {_unit addItemToVest "sfp_30Rnd_556x45_Stanag_tracer_plastic";};
 	};
-	case (_primWeapon == "LMG_03_F"): {
+	case ("KSP90"): {
 		for "_i" from 1 to 2 do {_unit addItemToVest "200Rnd_556x45_Box_Tracer_Red_F";};
 		for "_i" from 1 to 3 do {_unit addItemToBackpack "200Rnd_556x45_Box_Tracer_Red_F";};
 	};	
-	case (_primWeapon == "rhs_weap_m240G"): {
+	case ("KSP58"): {
 		for "_i" from 1 to 3 do {_unit addItemToVest "sfp_100Rnd_762x51_ksp58";};
 		for "_i" from 1 to 4 do {_unit addItemToBackpack "sfp_100Rnd_762x51_ksp58";};
-	};	
-	case (_primWeapon == "sfp_ak4d"): {
+	};
+	case ("SJV3");
+	case ("SKRP"): {
 		for "_i" from 1 to 6 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4_ap";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4_tracer";};
 	};
-	case (_primWeapon == "sfp_ak5dmk2"): {
+	case ("VC");
+	case ("CREW");
+	case ("CREW2");
+	case ("CREW3");
+	case ("PRSK");
+	case ("HPIL"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "sfp_30Rnd_556x45_Stanag_plastic";};
 	};
 	default {
@@ -133,8 +144,11 @@ switch (true) do {
 };
 
 //UBGL Ammo
-if (_primWeapon == "sfp_ak5c_M203") then {
-	for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "UGL_FlareCIR_F";};
-	//Add smoke rounds??
+switch (_role) do {
+	case ("GRPC"); 
+	case ("GRT"): {
+		for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
+		for "_i" from 1 to 4 do {_unit addItemToBackpack "UGL_FlareCIR_F";};
+		//Add smoke rounds??
+	};
 };
