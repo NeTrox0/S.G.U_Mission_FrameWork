@@ -111,6 +111,7 @@ switch (true) do {
 	case (_role == "SOLD3");
 	case (_role == "KSP90");
 	case (_role == "KSP58");
+	case (_role == "VC");
 	case (_role == "CREW");
 	case (_role == "HPIL");
 	case (_role == "JPIL"): {

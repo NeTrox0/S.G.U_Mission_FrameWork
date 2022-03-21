@@ -113,6 +113,7 @@ switch (true) do {
 	case (_role == "SOLD");
 	case (_role == "SOLD2");
 	case (_role == "SOLD3");
+	case (_role == "VC");
 	case (_role == "CREW");
 	case (_role == "HPIL");
 	case (_role == "JPIL"): {

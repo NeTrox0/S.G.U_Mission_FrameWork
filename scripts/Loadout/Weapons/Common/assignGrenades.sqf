@@ -84,7 +84,7 @@ switch (_role) do {
 
 switch (_role) do {
 	case ("VC"): {
-		for "_i" from 1 to 2 do {_unit addItemToVest "B_IR_Grenade";};
+		_unit addItemToVest "B_IR_Grenade";
 	};
 	case ("GRPC");
 	case ("GRPC2");
