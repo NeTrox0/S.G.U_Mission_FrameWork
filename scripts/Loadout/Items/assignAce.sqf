@@ -35,8 +35,8 @@ if (_role == "FARB") then {
 
 switch (_role) do {
 	case ("PRSK");
-	case ("SKRP");
-	case ("SJV3"): {
+//	case ("SJV3");
+	case ("SKRP"): {
 		_unit addItemToUniform "ACE_RangeCard";
 		_unit addItemToUniform "ACE_Kestrel4500";
 	};
@@ -46,11 +46,11 @@ switch (_role) do {
 switch (_role) do {
 	case ("PLTC");
 	case ("GRPC");
-	case ("GRPC2");
-	case ("VC"): {
+	case ("GRPC2"): {
 		for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
 		_unit addItemToBackpack "ACE_MX2A";
 	};
+	case ("VC");
 	case ("SIGN"): {
 		for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
 	};
@@ -58,18 +58,7 @@ switch (_role) do {
 };
 
 //ACE Survival Food and drink.
-switch (_role) do {
-	case ("HPIL");
-	case ("UAV"): {
-		_unit addItemToVest selectRandom ["ACE_MRE_ChickenTikkaMasala","ACE_MRE_CreamChickenSoup","ACE_MRE_MeatballsPasta","ACE_MRE_SteakVegetables","ACE_MRE_BeefStew"];
-		_unit addItemToVest selectRandom ["ACE_Can_Franta","ACE_Can_Spirit"];
-		_unit addItemToVest "ACE_Can_RedGull";
-		_unit addItemToVest "ACE_Canteen";
-	};
-	default {
-		_unit addItemToBackpack selectRandom ["ACE_MRE_ChickenTikkaMasala","ACE_MRE_CreamChickenSoup","ACE_MRE_MeatballsPasta","ACE_MRE_SteakVegetables","ACE_MRE_BeefStew"];
-		_unit addItemToBackpack selectRandom ["ACE_Can_Franta","ACE_Can_Spirit"];
-		_unit addItemToBackpack "ACE_Can_RedGull";
-		_unit addItemToBackpack "ACE_Canteen";
-	};
-};
+_unit addItem selectRandom ["ACE_MRE_ChickenTikkaMasala","ACE_MRE_CreamChickenSoup","ACE_MRE_MeatballsPasta","ACE_MRE_SteakVegetables","ACE_MRE_BeefStew"];
+_unit addItem selectRandom ["ACE_Can_Franta","ACE_Can_Spirit"];
+_unit addItem "ACE_Can_RedGull";
+_unit addItem "ACE_Canteen";

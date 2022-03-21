@@ -30,44 +30,44 @@ if (isClass(configfile >> "CfgPatches" >> "sfp_weapons_grenades")) then {
 
 //Smoke
 switch (_role) do {
-	case ("PRSK");
-	case ("VC");
-	case ("CREW");
-	case ("CREW2");
-	case ("CREW3"): {
-		for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellGreen";};
-	};
-	case ("HPIL"): {
-		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
-	};
-	case ("JPIL"): {
-		for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
-	};
-	default {
-		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellGreen";};
-	};
-};
-
-switch (_role) do {
-	case ("VC");
+	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2");
-	case ("SIGN");
-	case ("PLTC"): {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellYellow";};
+	case ("SIGN"): {
+		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
 	};
-	case ("HPIL"): {
-		_unit addItemToVest "SmokeShellYellow";
+	case ("PRSK"): {
+		for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+	};
+	case ("HPIL");
+	case ("VC"): {
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
+	};
+	case ("CREW");
+	case ("CREW2");
+	case ("CREW3"):	{
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 	};
 	case ("JPIL"): {
-		_unit addItemToUniform "SmokeShellYellow";
+		for "_i" from 1 to 2 do {_unit addItem "SmokeShellYellow";};
 	};
-	default {};
+	case ("SJV");
+	case ("SJV2");
+	case ("SJV3"): {
+		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
+	};	
+	default {
+		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+	};
 };
 
 
 //Utility
 switch (_role) do {
+	case ("SKRP");
 	case ("PRSK");
 	case ("HPIL");
 	case ("JPIL");
@@ -99,6 +99,9 @@ switch (_role) do {
 	case ("HPIL");
 	case ("JPIL"): {};
 	case ("PRSK");
+	case ("SJV");
+//	case ("SJV2");
+	case ("SJV3");
 	case ("VC");
 	case ("CREW");
 	case ("CREW2");

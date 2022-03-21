@@ -22,8 +22,8 @@ _UniformJPilot = "U_B_PilotCoveralls";
 //VEST
 _Vest = "";
 _VestArr = ["SGU_Carrier_Rig", "SGU_Carrier_Rig_Lite", "SGU_Carrier_Rig_Name"];
-_VestHPilot = "V_TacVest_blk";
-_VestCrew = "V_TacVest_blk";
+_VestHPilot = "sfp_kroppsskydd12_crew";
+_VestCrew = "sfp_kroppsskydd12_crew";
 
 //BACKPACK
 _Backpack = "SGU_Assault_Pack";
@@ -92,7 +92,6 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC") or (_role == "SIGN"))): {
 		_Backpack = _BackpackGrpC;
 	};
-	case (_role == "HPIL"): {};
 	case (_role == "SJV"): {
 		_Backpack = _BackpackKitSjv;
 	};
@@ -110,7 +109,15 @@ switch (true) do {
 	};
 	case (_role == "PRSK"): {
 		_Backpack = _BackpackPrsk;
-	};	
+	};
+	case (_role == "SOLD");
+	case (_role == "SOLD2");
+	case (_role == "SOLD3");
+	case (_role == "CREW");
+	case (_role == "HPIL");
+	case (_role == "JPIL"): {
+		_Backpack = "";
+	};
 	default {};
 };
 
