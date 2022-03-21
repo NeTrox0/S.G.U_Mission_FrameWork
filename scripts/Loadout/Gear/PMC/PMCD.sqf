@@ -77,7 +77,6 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC"))): {
 		_Backpack = _BackpackGrpC;
 	};
-	case (_role == "HPIL"): {};
 	case (_role == "SJV"): {
 		_Backpack = _BackpackKitSjv;
 	};
@@ -95,7 +94,10 @@ switch (true) do {
 	};
 	case (_role == "PRSK"): {
 		_Backpack = _BackpackPrsk;
-	};	
+	};
+	case (_role == "HPIL"): {
+		_Backpack = "";
+	};
 	default {};
 };
 
