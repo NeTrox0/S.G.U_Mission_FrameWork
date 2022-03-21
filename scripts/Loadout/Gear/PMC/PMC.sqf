@@ -82,6 +82,7 @@ switch (true) do {
 		_Backpack = _BackpackKitSjv;
 	};
 	case (_role == "SJV2");
+	case (_role == "SJv3");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};

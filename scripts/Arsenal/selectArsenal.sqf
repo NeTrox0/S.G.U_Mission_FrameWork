@@ -30,11 +30,11 @@ switch (_camo) do {
 	case (4);
 	case (5): {
 		//PMC or PMCD
-		_Ars = [_role, _object] call compile preprocessfile "scripts\Gear\Arsenal\ArsenalPMC.sqf";
+		_Ars = [_role, _object] call compile preprocessfile "scripts\Arsenal\ArsenalPMC.sqf";
 	}; 
 	default {
 		//M90, M90K, MC or MCD
-		_Ars = [_role, _object] call compile preprocessfile "scripts\Gear\Arsenal\Arsenal.sqf";
+		_Ars = [_role, _object] call compile preprocessfile "scripts\Arsenal\Arsenal.sqf";
 	};
 };
 waitUntil {_Ars};

@@ -21,8 +21,7 @@ switch (_role) do {
 	};
 	case ("ING");
 	case ("GRPC2");
-	case ("SOLD3");
-	case ("GRT"): {
+	case ("SOLD3"): {
 		if (isClass(configfile >> "CfgPatches" >> "rhsusf_c_weapons")) then {
 			_unit addWeapon "rhs_weap_M136";
 		};

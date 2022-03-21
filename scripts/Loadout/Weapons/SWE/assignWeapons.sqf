@@ -37,7 +37,7 @@ switch (_role) do {
 	case ("KSP58"): {
 		_unit addWeapon "rhs_weap_m240G";
 	};
-	case ("SJV2");
+	case ("SJV3");
 	case ("SKRP"): {
 		_unit addWeapon "sfp_ak4d";
 	};
@@ -99,8 +99,7 @@ switch (_primWeapon) do {
 
 //Side
 switch (_primWeapon) do {
-	case ("sfp_ak5c_m203"): {
-	};
+	case ("sfp_ak5c_m203"): {};
 	default {		
 		_unit addPrimaryWeaponItem "acc_pointer_ir";
 	};
@@ -137,4 +136,5 @@ switch (true) do {
 if (_primWeapon == "sfp_ak5c_M203") then {
 	for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "UGL_FlareCIR_F";};
+	//Add smoke rounds??
 };

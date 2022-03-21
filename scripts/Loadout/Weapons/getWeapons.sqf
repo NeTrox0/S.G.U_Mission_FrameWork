@@ -17,7 +17,7 @@ removeAllWeapons _unit;
 
 //Special For PRSK AceGunbag
 if (_role == "PRSK") then {
-	[_unit] execVM "scripts\gear\weapons\assignAceGunbag.sqf";
+	[_unit] execVM "scripts\Loadout\weapons\Common\assignAceGunbag.sqf";
 	sleep 0.1;
 };
 
@@ -25,17 +25,22 @@ if (_role == "PRSK") then {
 switch (_camo) do {
 	case (4);
 	case (5): {
-		//PMC or PMCD
-		[_unit, _role] execVM "scripts\gear\weapons\assignWeaponsPMC.sqf";
+		//4:PMC or 5:PMCD
+		[_unit, _role] execVM "scripts\Loadout\weapons\PMC\assignWeaponsPMC.sqf";
 	}; 
+	case (2);
+	case (3): {
+		// 2:MC, 3:MCT
+		[_unit, _role] execVM "scripts\Loadout\weapons\SOF\assignWeaponsSOF.sqf";
+	};
 	default {
-		//M90, M90K, MC or MCD
-		[_unit, _role] execVM "scripts\gear\weapons\assignWeapons.sqf";
-		
-		[_unit, _role] execVM "scripts\gear\weapons\assignLauncher.sqf";
+		//0:M90, 1:M90K,
+		[_unit, _role] execVM "scripts\Loadout\weapons\SWE\assignWeapons.sqf";
 	};
 };
 
-[_unit, _role] execVM "scripts\gear\weapons\assignSidearm.sqf";
+[_unit, _role] execVM "scripts\Loadout\weapons\Common\assignLauncher.sqf";
 
-[_unit, _role] execVM "scripts\gear\weapons\assignGrenades.sqf";
+[_unit, _role] execVM "scripts\Loadout\weapons\Common\assignSidearm.sqf";
+
+[_unit, _role] execVM "scripts\Loadout\weapons\Common\assignGrenades.sqf";

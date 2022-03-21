@@ -96,6 +96,8 @@ switch (true) do {
 	case (_role == "FARB");
 	case (_role == "GRGA");
 	case (_role == "SJV");
+	case (_role == "SJV2");
+	case (_role == "SJV3");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};

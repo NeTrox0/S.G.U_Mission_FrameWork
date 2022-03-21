@@ -34,8 +34,8 @@ if (isClass(configfile >> "CfgPatches" >> "ace_medical")) then {
 			_unit addItemToBackpack "ACE_surgicalKit";
 //			_unit addItemToBackpack "ACE_personalAidKit";
 		};
-		case ("SJV2");
-		case ("SJV3");
+		case ("SJV2"); //SJV Lätt
+		case ("SJV3"); //SJV Skarpskytt
 		case ("CREW2"): {
 			for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_fieldDressing";};
 			for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_elasticBandage";};

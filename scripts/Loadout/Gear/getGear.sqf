@@ -24,24 +24,24 @@ removeBackpack _unit;
 //Get the items in the correct cammo
 switch (_camo) do {
 	case (1): { //1:M90K
-		[_unit, _role] call compile preprocessfile "scripts\gear\gear\M90K.sqf";
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SWE\M90K.sqf";
 	};
 	case (2): { //2:MC
-		[_unit, _role] call compile preprocessfile "scripts\gear\gear\MC.sqf";
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SOF\MC.sqf";
 	};
 	case (3): { //3:MCT
-		[_unit, _role] call compile preprocessfile "scripts\gear\gear\MCT.sqf";
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SOF\MCT.sqf";
 	};
 	case (4): { //4:PMC
-		[_unit, _role] call compile preprocessfile "scripts\gear\gear\PMC.sqf";
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\PMC\PMC.sqf";
 	};	
 	case (5): { //5:PMCD
-		[_unit, _role] call compile preprocessfile "scripts\gear\gear\PMCD.sqf";
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\PMC\PMCD.sqf";
 	};		
 	default { //0:M90
-		[_unit, _role] call compile preprocessfile "scripts\gear\gear\M90.sqf";
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SWE\M90.sqf";
 	};
 };
 
 //set gear to true to allow continuation from caller.
-true;
+true
