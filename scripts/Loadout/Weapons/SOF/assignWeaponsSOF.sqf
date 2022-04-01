@@ -35,6 +35,7 @@ switch (_role) do {
 	case ("KSP58"): {
 		_unit addWeapon "rhs_weap_m240G";
 	};	
+	case ("SJV3");
 	case ("SKRP"): {
 		_unit addWeapon "rhs_weap_sr25_ec";
 	};
@@ -129,6 +130,7 @@ switch (_role) do {
 //		for "_i" from 1 to 7 do {_unit addItemToVest "rhsusf_100Rnd_762x51_m80a1epr";};
 		for "_i" from 1 to 8 do {_unit addItemToVest "sfp_100Rnd_762x51_ksp58";};
 	};
+	case ("SJV3");
 	case ("SKRP"): {
 		for "_i" from 1 to 6 do {_unit addItemToVest "rhsusf_20Rnd_762x51_SR25_m118_Special_Mag";};
 		for "_i" from 1 to 2 do {_unit addItem "rhsusf_20Rnd_762x51_SR25_m993_Mag";};
