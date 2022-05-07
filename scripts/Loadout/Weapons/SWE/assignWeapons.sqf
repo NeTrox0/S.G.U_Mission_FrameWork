@@ -60,6 +60,7 @@ _primWeapon = primaryWeapon _unit;
 
 //Optic
 switch (_primWeapon) do {
+	case ("sfp_ksp58f");
 	case ("sfp_ak5dmk2"): {
 		_unit addPrimaryWeaponItem "sfp_optic_aimpoint";
 	};
@@ -70,9 +71,6 @@ switch (_primWeapon) do {
 			_unit addPrimaryWeaponItem "optic_AMS";
 		};
 		_unit addItemToBackpack "optic_NVS";
-	};
-	case ("sfp_ksp58f"): {
-		_unit addPrimaryWeaponItem "rhsusf_acc_elcan_ard";
 	};
 	default {
 		_unit addPrimaryWeaponItem "sfp_optic_3x_aimpoint";
