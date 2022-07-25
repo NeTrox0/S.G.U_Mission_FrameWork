@@ -26,7 +26,6 @@ if (_role == "JPIL") exitWith {};
 
 //1: Weapon
 switch (_role) do {
-	case ("PLTC");
 	case ("GRPC");
 	case ("GRT"): {
 		_unit addWeapon "sfp_ak5c_m203";
