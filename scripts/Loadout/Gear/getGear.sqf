@@ -4,7 +4,7 @@
 *	
 *	Parameters: 
 	_unit
-*	_CammoInt fetched from Params. 0:M90, 1:M90K, 2:MC, 3:MCT, 4:PMC, 5:PMCD
+*	_CammoInt fetched from Params. 0:M90, 1:M90K, 2:M90S, 3:MC, 4:MCT, 5:PMC, 6:PMCD
 	_role
 *
 *	By Trox
@@ -26,16 +26,19 @@ switch (_camo) do {
 	case (1): { //1:M90K
 		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SWE\M90K.sqf";
 	};
-	case (2): { //2:MC
+	case (2): { //2:M90S
+		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SWE\M90S.sqf";
+	};
+	case (3): { //3:MC
 		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SOF\MC.sqf";
 	};
-	case (3): { //3:MCT
+	case (4): { //4:MCT
 		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\SOF\MCT.sqf";
 	};
-	case (4): { //4:PMC
+	case (5): { //5:PMC
 		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\PMC\PMC.sqf";
 	};	
-	case (5): { //5:PMCD
+	case (6): { //6:PMCD
 		[_unit, _role] call compile preprocessfile "scripts\Loadout\Gear\PMC\PMCD.sqf";
 	};		
 	default { //0:M90

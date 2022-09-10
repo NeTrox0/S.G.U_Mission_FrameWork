@@ -26,7 +26,6 @@ if (_role == "JPIL") exitWith {};
 
 //1: Weapon
 switch (_role) do {
-	case ("PLTC");
 	case ("GRPC");
 	case ("GRT"): {
 		_unit addWeapon "sfp_ak5c_m203";
@@ -35,7 +34,7 @@ switch (_role) do {
 		_unit addWeapon "LMG_03_F";
 	};
 	case ("KSP58"): {
-		_unit addWeapon "rhs_weap_m240G";
+		_unit addWeapon "sfp_ksp58f";
 	};
 	case ("SJV3");
 	case ("SKRP"): {
@@ -60,6 +59,7 @@ _primWeapon = primaryWeapon _unit;
 
 //Optic
 switch (_primWeapon) do {
+	case ("sfp_ksp58f");
 	case ("sfp_ak5dmk2"): {
 		_unit addPrimaryWeaponItem "sfp_optic_aimpoint";
 	};
@@ -71,9 +71,6 @@ switch (_primWeapon) do {
 		};
 		_unit addItemToBackpack "optic_NVS";
 	};
-	case ("rhs_weap_m240G"): {
-		_unit addPrimaryWeaponItem "rhsusf_acc_elcan_ard";
-	};
 	default {
 		_unit addPrimaryWeaponItem "sfp_optic_3x_aimpoint";
 	};
@@ -81,7 +78,7 @@ switch (_primWeapon) do {
 
 //Muzzle
 switch (_primWeapon) do {
-	case ("rhs_weap_m240G");
+	case ("sfp_ksp58f");
 	case ("sfp_ak5dmk2"): {
 	};
 	case ("sfp_ak4d"): {
@@ -103,7 +100,7 @@ switch (_primWeapon) do {
 
 //Side
 switch (_primWeapon) do {
-	case ("sfp_ak5c_m203"): {};
+	case ("sfp_ksp58f"): {};
 	default {		
 		_unit addPrimaryWeaponItem "acc_pointer_ir";
 	};

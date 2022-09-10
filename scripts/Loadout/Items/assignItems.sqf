@@ -39,15 +39,12 @@ switch (_role) do {
 	case ("HPIL"): {
 		_unit addItemToVest "rhsusf_ANPVS_15";
 	};
-	case ("UAV"): {
-		_unit addItemToVest "rhsusf_ANPVS_14";
-	};
 	case ("SJV3");
 	case ("SKRP"): {
-		_unit addItemToBackpack "rhsusf_ANPVS_14";
+		_unit addItemToBackpack "rhsusf_ANPVS_15";
 	};	
 	default {
-		_unit addItemToVest "rhsusf_ANPVS_14";
+		_unit addItemToVest "rhsusf_ANPVS_15";
 	};
 };
 

@@ -1,27 +1,33 @@
 /*
 *	Select the correct items for Cammo and Role
 *	See the ReadME for accepted roles and cammos
-*	Requires: SGU, VSM, RHS, WS.
+*	Requires: SFP, SGU, ACE, ILBE and VSM.
 *	
-*	Parameters: _unit, _role
+*	Parameters: _role
 *
 *	By Trox
 */
 
+
+// Alpine_Massif_Camo
+
 //HELMET
 _Helmet = "";
-_HelmetArr = ["H_Cap_headphones","lxWS_H_CapB_rvs_blk_ION","VSM_Bowman_cap_Black","VSM_Black_OPS","VSM_Black_OPS_2","VSM_Bowman_cap_Green","VSM_OGA_OD_OPS","VSM_OGA_OD_OPS_2","VSM_OD_Spray_OPS","VSM_OD_Spray_OPS_2","rhsusf_opscore_paint_pelt","rhsusf_opscore_paint_pelt_nsw_cam","rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_nsw_cam"];
+_HelmetArr = ["Alpine_opscore","Alpine_opscore_2","White_opscore","white_opscore_2"];
+_HelmetJPilot = "H_PilotHelmetFighter_B";
 _HelmetHPilot = "H_PilotHelmetHeli_B";
+_HelmetCrewArr = ["rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"];
 
 //UNIFORM
 _Uniform = "";
-_UniformArr = ["U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_BG_Guerilla2_3","U_lxWS_ION_Casual2","U_lxWS_ION_Casual4","LOP_U_PMC_tac_prp_palm","LOP_U_PMC_tac_grn_palm","LOP_U_PMC_tac_red_hi","LOP_U_PMC_tac_blue_hi","LOP_U_PMC_tac_tacky"];
-_UniformHPilot = "U_I_G_Story_Protagonist_F";
+_UniformArr = ["Alpine_Crye_Camo","Alpine_Crye_SS_camo","Alpine_white_Crye_camo","Alpine_white_Crye_SS_camo"];
+_UniformJPilot = "U_B_PilotCoveralls";
 
 //VEST
 _Vest = "";
 _VestArr = ["SGU_Carrier_Rig", "SGU_Carrier_Rig_Lite", "SGU_Carrier_Rig_Name"];
-_VestHPilot = "V_TacVest_blk";
+_VestHPilot = "sfp_kroppsskydd12_crew";
+_VestCrew = "sfp_kroppsskydd12_crew";
 
 //BACKPACK
 _Backpack = "SGU_Assault_Pack";
@@ -29,8 +35,8 @@ _BackpackSjv = "SGU_Assault_Pack_Medic";
 _BackpackKit = "SGU_Kitbag";
 _BackpackKitSjv = "SGU_Kitbag_Medic";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpc = "tfw_ilbe_whip_gr";
-_BackpackPrsk =	"ace_gunbag";
+_BackpackGrpC = "tfw_ilbe_whip_gr";
+_BackpackPrsk = "ace_gunbag";
 
 //***************************************************************//
 
@@ -38,22 +44,30 @@ _unit = _this select 0;
 _role = _this select 1;
 
 
-
 //Helmet
 switch (_role) do {
+	case ("JPIL"): {
+		_Helmet = _HelmetJPilot;
+	};
 	case ("HPIL"): {
 		_Helmet = _HelmetHPilot;
 	};
+	case ("VC");
+	case ("CREW");
+	case ("CREW2");
+	case ("CREW3"): {
+		_Helmet = selectRandom _HelmetCrewArr;
+	};
 	default {
-		_Helmet = selectRandom _HelmetArr;
+		_Helmet = selectRandom _HelmetArr
 	};
 };
 
 
 //Uniform
 switch (_role) do {
-	case ("HPIL"): {
-		_Uniform = _UniformHPilot;
+	case ("JPIL"): {
+		_Uniform = _UniformJPilot;
 	};
 	default {
 		_Uniform = selectRandom _UniformArr;
@@ -63,8 +77,15 @@ switch (_role) do {
 
 //Vest
 switch (_role) do {
+	case ("JPIL"): {};
 	case ("HPIL"): {
 		_Vest = _VestHPilot;
+	};
+	case ("VC");
+	case ("CREW");
+	case ("CREW2");
+	case ("CREW3"): {
+		_Vest = _VestCrew;
 	};
 	default {
 		_Vest = selectRandom _VestArr;
@@ -95,7 +116,13 @@ switch (true) do {
 	case (_role == "PRSK"): {
 		_Backpack = _BackpackPrsk;
 	};
-	case (_role == "HPIL"): {
+	case (_role == "SOLD");
+	case (_role == "SOLD2");
+	case (_role == "SOLD3");
+	case (_role == "VC");
+	case (_role == "CREW");
+	case (_role == "HPIL");
+	case (_role == "JPIL"): {
 		_Backpack = "";
 	};
 	default {};

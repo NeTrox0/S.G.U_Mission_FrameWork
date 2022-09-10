@@ -10,6 +10,7 @@
 
 _unit = _this select 0;
 _role = _this select 1;
+_camo = _this select 2;
 
 removeAllItems _unit;
 removeAllAssignedItems _unit;
@@ -23,6 +24,9 @@ removeAllAssignedItems _unit;
 
 //assign ACE items.
 [_unit, _role] execVM "scripts\Loadout\items\assignAce.sqf";
+
+//assign ACE Survival items.
+[_unit, _camo] execVM "scripts\Loadout\items\assignAceSurvival.sqf";
 
 //assign ACE medical items.
 [_unit, _role] execVM "scripts\Loadout\items\assignMedical.sqf";

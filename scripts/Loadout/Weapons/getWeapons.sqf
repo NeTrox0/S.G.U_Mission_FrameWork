@@ -23,18 +23,18 @@ if (_role == "PRSK") then {
 
 
 switch (_camo) do {
-	case (4);
-	case (5): {
-		//4:PMC or 5:PMCD
+	case (5);
+	case (6): {
+		//5:PMC or 6:PMCD
 		[_unit, _role] execVM "scripts\Loadout\weapons\PMC\assignWeaponsPMC.sqf";
 	}; 
-	case (2);
-	case (3): {
-		// 2:MC, 3:MCT
+	case (3);
+	case (4): {
+		// 3:MC, 4:MCT
 		[_unit, _role] execVM "scripts\Loadout\weapons\SOF\assignWeaponsSOF.sqf";
 	};
 	default {
-		//0:M90, 1:M90K,
+		//0:M90, 1:M90K, 2:M90S
 		[_unit, _role] execVM "scripts\Loadout\weapons\SWE\assignWeapons.sqf";
 	};
 };

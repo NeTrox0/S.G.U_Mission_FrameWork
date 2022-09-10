@@ -58,9 +58,3 @@ switch (_role) do {
 	};
 	default {};
 };
-
-//ACE Survival Food and drink.
-_unit addItem selectRandom ["ACE_MRE_ChickenTikkaMasala","ACE_MRE_CreamChickenSoup","ACE_MRE_MeatballsPasta","ACE_MRE_SteakVegetables","ACE_MRE_BeefStew"];
-_unit addItem selectRandom ["ACE_Can_Franta","ACE_Can_Spirit"];
-_unit addItem "ACE_Can_RedGull";
-_unit addItem "ACE_Canteen";
