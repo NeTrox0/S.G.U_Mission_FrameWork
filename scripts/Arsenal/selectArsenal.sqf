@@ -3,7 +3,7 @@
 *	
 *	Parameters:
 *	_unit
-*	Camo fetched from Params. 0:M90, 1:M90K, 2:MC, 3:MCT. Defaults to M90 if none is set.
+*	Camo fetched from Params. Defaults if none is set.
 *	Role fetched from the unit by a variable. Defaults to 0("SOLD") if none is set.
 *	
 *	By Trox
@@ -27,8 +27,8 @@ _object allowDamage false;
 _object enableSimulation false;
 
 switch (_camo) do {
-	case (4);
-	case (5): {
+	case (5);
+	case (6): {
 		//PMC or PMCD
 		_Ars = [_role, _object] call compile preprocessfile "scripts\Arsenal\ArsenalPMC.sqf";
 	}; 
