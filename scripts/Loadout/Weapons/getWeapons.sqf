@@ -16,21 +16,22 @@ _camo = _this select 2;
 removeAllWeapons _unit;
 
 //Special For PRSK AceGunbag
-if (_role == "PRSK") then {
-	[_unit] execVM "scripts\Loadout\weapons\Common\assignAceGunbag.sqf";
-	sleep 0.1;
-};
+//if (_role == "PRSK") then {
+//	[_unit] execVM "scripts\Loadout\weapons\Common\assignAceGunbag.sqf";
+//	sleep 0.1;
+//};
 
 
 switch (_camo) do {
-	case (5);
+	
 	case (6): {
-		//5:PMC or 6:PMCD
+		//6:PMC
 		[_unit, _role] execVM "scripts\Loadout\weapons\PMC\assignWeaponsPMC.sqf";
 	}; 
 	case (3);
-	case (4): {
-		// 3:MC, 4:MCT
+	case (4);
+	case (5): {
+		// 3:MC, 4:MCT, 5:MCS
 		[_unit, _role] execVM "scripts\Loadout\weapons\SOF\assignWeaponsSOF.sqf";
 	};
 	default {

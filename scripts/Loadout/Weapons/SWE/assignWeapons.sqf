@@ -40,11 +40,13 @@ switch (_role) do {
 	case ("SKRP"): {
 		_unit addWeapon "sfp_ak4d";
 	};
+	case ("PRSK"): {
+		_unit addweapon "sfp_psg90_base";
+	};
 	case ("VC");
 	case ("CREW");
 	case ("CREW2");
 	case ("CREW3");
-	case ("PRSK");
 	case ("HPIL"): {
 		_unit addWeapon "sfp_ak5dmk2";
 	};
@@ -71,6 +73,10 @@ switch (_primWeapon) do {
 		};
 		_unit addItemToBackpack "optic_NVS";
 	};
+	case ("sfp_psg90_base"): {
+		_unit addPrimaryWeaponItem "sfp_optic_kikarsikte90b_10x";
+		_unit addItemToVest "optic_NVS";
+	};	
 	default {
 		_unit addPrimaryWeaponItem "sfp_optic_3x_aimpoint";
 	};
@@ -84,6 +90,9 @@ switch (_primWeapon) do {
 	case ("sfp_ak4d"): {
 		_unit addItemToBackpack "muzzle_snds_B";
 	};
+	case ("sfp_psg90_base"): {
+		_unit addItemToVest "muzzle_snds_b";
+	};		
 	default {
 		_unit addItem "muzzle_snds_M";
 	};
@@ -127,11 +136,14 @@ switch (_role) do {
 		for "_i" from 1 to 6 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4_ap";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4_tracer";};
 	};
+	case ("PRSK"): {
+		for "_i" from 1 to 3 do {_unit addItemToVest "sfp_9rnd_762x51_psg90";}; //(Ball)
+		for "_i" from 1 to 5 do {_unit addItemToVest "sfp_9rnd_762x51_psg90_prick";}; //(SLAP)
+	};
 	case ("VC");
 	case ("CREW");
 	case ("CREW2");
 	case ("CREW3");
-	case ("PRSK");
 	case ("HPIL"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "sfp_30Rnd_556x45_Stanag_plastic";};
 	};
