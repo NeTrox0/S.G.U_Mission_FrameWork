@@ -3,11 +3,6 @@
 
 //SGU Framework A3 init.sqf / 2018 04 17
 
-//----Invis markers----
-//"respawn_west" setMarkerAlphaLocal 0;
-//"respawn_east" setMarkerAlphaLocal 0;
-
-
 //----Disable Saving and Auto Saving----
 enableSaving [false, false];
 
