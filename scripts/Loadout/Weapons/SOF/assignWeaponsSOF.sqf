@@ -16,7 +16,7 @@
 */
 
 
-_unit = _this select 0;
+ _unit = _this select 0;
 _role = _this select 1;
 
 //Jet Pilot exit.
@@ -45,7 +45,9 @@ switch (_role) do {
 	case ("CREW3"): {
 		_unit addWeapon "rhs_weap_m4_carryhandle";
 	};
-	case ("PRSK");
+	case ("PRSK"):{
+		_unit addWeapon "rhs_weap_XM2010";
+	};
 	case ("HPIL"): {
 		_unit addWeapon "SMG_05_F";
 	};
@@ -61,6 +63,10 @@ _weapon = primaryWeapon _unit;
 //Optic
 switch (_weapon) do {
 	case ("SMG_05_F"): {};
+	case ("rhs_weap_XM2010"): {
+		_unit addPrimaryWeaponItem "rhsusf_acc_m8541";
+		_unit addItemToVest "optic_NVS";
+	};
 	case ("rhs_weap_sr25_ec"): {
 		if (_role == "SJV3") then {
 			_unit addPrimaryWeaponItem "rhsusf_acc_su230a";
@@ -86,11 +92,19 @@ switch (_weapon) do {
 //Muzzle
 switch (_weapon) do {
 	case ("rhs_weap_m240G"): {};
+	case ("rhs_weap_XM2010"): {
+		_unit addItemToVest "rhsusf_acc_m2010s_wd";
+	};
 	case ("SMG_05_F"): {
 		_unit addItem "muzzle_snds_l";
 	};
 	case ("rhs_weap_sr25_ec"): {
-		_unit addItemToBackpack "rhsusf_acc_aac_762sdn6_silencer";
+		if (_role == "SJV3") then {
+			_unit addItemToVest "rhsusf_acc_aac_762sdn6_silencer";
+		} else {
+			_unit addItemToBackpack "rhsusf_acc_aac_762sdn6_silencer";
+		};
+		
 	};
 	default {
 		_unit addItem "rhsusf_acc_nt4_black";
@@ -103,6 +117,7 @@ switch (_weapon) do {
 	case ("rhs_weap_mk18_m320");
 	case ("SMG_05_F"): {
 	};
+	case ("rhs_weap_XM2010");
 	case ("rhs_weap_sr25_ec"): {
 		_unit addPrimaryWeaponItem "bipod_01_F_blk";
 	};
@@ -141,8 +156,10 @@ switch (_role) do {
 	case ("CREW3"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG";};
 	};
-	case ("HPIL");
 	case ("PRSK"): {
+		for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_5Rnd_300winmag_xm2010";};
+	};
+	case ("HPIL"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02_Tracer_Red";};
 	};
 	default {

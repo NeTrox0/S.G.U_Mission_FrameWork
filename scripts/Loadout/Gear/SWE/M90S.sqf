@@ -9,8 +9,6 @@
 */
 
 
-// Alpine_Massif_Camo
-
 //HELMET
 _Helmet = "";
 _HelmetArr = ["Alpine_opscore","Alpine_opscore_2","White_opscore","white_opscore_2"];
@@ -19,7 +17,7 @@ _HelmetHPilot = "H_PilotHelmetHeli_B";
 _HelmetCrewArr = ["rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"];
 
 //UNIFORM
-_Uniform = "";
+_Uniform = ""; // Alpine_Massif_Camo
 _UniformArr = ["Alpine_Crye_Camo","Alpine_Crye_SS_camo","Alpine_white_Crye_camo","Alpine_white_Crye_SS_camo"];
 _UniformJPilot = "U_B_PilotCoveralls";
 
@@ -35,8 +33,7 @@ _BackpackSjv = "SGU_Assault_Pack_Medic";
 _BackpackKit = "SGU_Kitbag";
 _BackpackKitSjv = "SGU_Kitbag_Medic";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpC = "tfw_ilbe_whip_gr";
-_BackpackPrsk = "ace_gunbag";
+_BackpackGrpC = "tfw_ilbe_whip_alpine";
 
 //***************************************************************//
 
@@ -113,9 +110,7 @@ switch (true) do {
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
-	case (_role == "PRSK"): {
-		_Backpack = _BackpackPrsk;
-	};
+	case (_role == "PRSK");
 	case (_role == "SOLD");
 	case (_role == "SOLD2");
 	case (_role == "SOLD3");

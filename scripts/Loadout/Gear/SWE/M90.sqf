@@ -32,7 +32,6 @@ _BackpackKit = "SGU_Kitbag";
 _BackpackKitSjv = "SGU_Kitbag_Medic";
 _BackpackUAV = "B_UAV_01_backpack_F";
 _BackpackGrpC = "tfw_ilbe_whip_gr";
-_BackpackPrsk = "ace_gunbag";
 
 //***************************************************************//
 
@@ -107,9 +106,7 @@ switch (true) do {
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
-	case (_role == "PRSK"): {
-		_Backpack = _BackpackPrsk;
-	};
+	case (_role == "PRSK");
 	case (_role == "SOLD");
 	case (_role == "SOLD2");
 	case (_role == "SOLD3");

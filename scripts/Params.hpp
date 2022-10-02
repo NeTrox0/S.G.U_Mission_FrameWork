@@ -9,7 +9,7 @@ class Params {
 	class Gear_Camo { 
 		title = "Camo of the gear used by players";
         values[]={0, 1, 2, 3, 4, 5, 6};
-        texts[]={"M90", "M90K", "M90S", "MC", "MCT", "PMC", "PMCD"};
+        texts[]={"M90", "M90K", "M90S", "MC", "MCT", "MCS", "PMC"};
         default = 0;
     };
 /*		

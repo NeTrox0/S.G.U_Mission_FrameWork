@@ -1,7 +1,7 @@
 /*
 *	Select the correct items for Cammo and Role
 *	See the ReadME for accepted roles and cammos
-*	Requires: SFP, SGU, ACE, ILBE
+*	Requires: VSM, ILBE
 *	
 *	Parameters: _role
 *
@@ -9,29 +9,28 @@
 */
 
 //HELMET
-_Helmet = "sfp_m90d_helmet_peltor_nvg";
+_Helmet = "";
+_HelmetArr = ["Alpine_opscore","Alpine_opscore_2","White_opscore","white_opscore_2"];
 _HelmetJPilot = "H_PilotHelmetFighter_B";
 _HelmetHPilot = "H_PilotHelmetHeli_B";
-_HelmetCrewArr = ["rhsusf_cvc_alt_helmet","rhsusf_cvc_ess"];
+_HelmetCrewArr = ["rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"];
 
 //UNIFORM
 _Uniform = "";
-_UniformArr = ["sfp_m90d_uniform_fs18", "sfp_m90d_uniform", "sfp_m90d_uniform_long_m08", "sfp_m90d_uniform_folded"];
+_UniformArr = ["Alpine_Crye_Camo","Alpine_Crye_SS_camo","Alpine_white_Crye_camo","Alpine_white_Crye_SS_camo"];
 _UniformJPilot = "U_B_PilotCoveralls";
 
 //VEST
-_Vest = "";
-_VestArr = ["SGU_Carrier_Rig_Tan", "SGU_Carrier_Rig_Lite_Tan", "SGU_Carrier_Rig_Name_Tan"];
-_VestHPilot = "sfp_kroppsskydd12_crew";
-_VestCrew = "sfp_kroppsskydd12_crew";
+_Vest = "dr_Alpinelbt_op";
+_VestKSP = "dr_Alpinelbt_mg";
+_VestHPilot = "V_TacVest_blk";
+_VestCrew = "V_TacVest_blk";
 
 //BACKPACK
-_Backpack = "SGU_Assault_Pack_Tan";
-_BackpackSjv = "SGU_Assault_Pack_Medic_Tan";
-_BackpackKit = "SGU_Kitbag_Tan";
-_BackpackKitSjv = "SGU_Kitbag_Medic_Tan";
+_Backpack = "Alpine_Backpack_Compact";
+_BackpackSjv = "Alpine_Backpack_kitbag";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpC = "tfw_ilbe_whip_coy";
+_BackpackGrpC = "tfw_ilbe_whip_alpine";
 
 //***************************************************************//
 
@@ -53,7 +52,9 @@ switch (_role) do {
 	case ("CREW3"): {
 		_Helmet = selectRandom _HelmetCrewArr;
 	};
-	default {};
+	default {
+		_Helmet = selectRandom _HelmetArr;
+	};
 };
 
 
@@ -70,7 +71,9 @@ switch (_role) do {
 
 //Vest
 switch (_role) do {
-	case ("JPIL"): {};
+	case ("JPIL"): {
+		_Vest = "";
+	};
 	case ("HPIL"): {
 		_Vest = _VestHPilot;
 	};
@@ -80,9 +83,11 @@ switch (_role) do {
 	case ("CREW3"): {
 		_Vest = _VestCrew;
 	};
-	default {
-		_Vest = selectRandom _VestArr;
+	case ("KSP90");
+	case ("KSP58"): {
+		_Vest = _VestKSP;
 	};
+	default {};
 };
 
 
@@ -91,18 +96,12 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC") or (_role == "SIGN"))): {
 		_Backpack = _BackpackGrpC;
 	};
-	case (_role == "SJV"): {
-		_Backpack = _BackpackKitSjv;
-	};
-	case (_role == "SJV2");
-	case (_role == "SJV3");
+	case (_role == "FARB");
+	case (_role == "GRGA");
+	case (_role == "SJV");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};
-	case (_role == "GRGA");
-	case (_role == "FARB"): {
-		_Backpack = _BackpackKit;
-	};	
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
@@ -110,11 +109,13 @@ switch (true) do {
 	case (_role == "SOLD");
 	case (_role == "SOLD2");
 	case (_role == "SOLD3");
+	case (_role == "KSP90");
+	case (_role == "KSP58");
 	case (_role == "VC");
 	case (_role == "CREW");
 	case (_role == "HPIL");
 	case (_role == "JPIL"): {
-		_Backpack = "";
+		_backpack = "";
 	};
 	default {};
 };

@@ -27,13 +27,12 @@ _object allowDamage false;
 _object enableSimulation false;
 
 switch (_camo) do {
-	case (5);
 	case (6): {
-		//PMC or PMCD
+		//PMC
 		_Ars = [_role, _object] call compile preprocessfile "scripts\Arsenal\ArsenalPMC.sqf";
 	}; 
 	default {
-		//M90, M90K, MC or MCD
+		//M90, M90K, M90S, MC, MCD or MCS
 		_Ars = [_role, _object] call compile preprocessfile "scripts\Arsenal\Arsenal.sqf";
 	};
 };
