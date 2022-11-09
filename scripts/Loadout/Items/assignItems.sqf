@@ -19,7 +19,7 @@ _unit linkItem "ItemCompass";
 
 //IF TFAR is loaded and unit is a TL or SL do not give them any Watch. TFAR_MICRODAGR will take its place!
 
-if ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC"))) then {
+if ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC"]) then {
 } else {
 	_unit linkItem "ItemWatch";
 };

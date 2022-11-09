@@ -75,7 +75,7 @@ switch (_role) do {
 
 //Backpack
 switch (true) do {
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and ((_role == "GRPC") or (_role == "GRPC2") or (_role == "PLTC") or (_role == "SIGN"))): {
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC","SIGN"]): {
 		_Backpack = selectRandom _BackpackGrpCArr;
 	};
 	case (_role == "SJV"): {
