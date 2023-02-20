@@ -38,7 +38,7 @@ switch (_role) do {
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
 	};
 	case ("PRSK"): {
-		for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 	};
 	case ("HPIL");
 	case ("VC"): {
@@ -67,7 +67,6 @@ switch (_role) do {
 
 //Utility
 switch (_role) do {
-	case ("SKRP");
 	case ("PRSK");
 	case ("HPIL");
 	case ("JPIL");
@@ -99,15 +98,16 @@ switch (_role) do {
 //Frags
 switch (_role) do {
 	case ("HPIL");
-	case ("JPIL"): {};
-	case ("PRSK");
-	case ("SJV");
-//	case ("SJV2");
-	case ("SJV3");
+	case ("JPIL");
 	case ("VC");
 	case ("CREW");
 	case ("CREW2");
 	case ("CREW3"): {
+	};
+	case ("PRSK");
+	case ("SJV");
+	case ("SJV2");
+	case ("SJV3"): {
 		_unit addItemToVest _Frag;
 	};
 	default {

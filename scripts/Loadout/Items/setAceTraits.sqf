@@ -19,6 +19,10 @@ _unit setVariable ["Ace_medical_medicClass", 0];
 _unit setVariable ["ACE_isEOD", false];
 _unit setVariable ["ACE_isEngineer", 0];
 
+//disallow to unit to use T1 Artillery mod.
+_unit setVariable ["T1AM_UnitAllow", false, true];
+
+
 switch (_role) do {
 	case ("SJV");
 	case ("SJV2");
@@ -39,5 +43,10 @@ switch (_role) do {
 		_unit setUnitTrait ["explosiveSpecialist",True];
 		_unit setVariable ["ACE_isEOD", true];
 	};
+	case ("PLTC");
+	case ("SIGN"): {
+		//allow to unit to use T1 Artillery mod.
+		_unit setVariable ["T1AM_UnitAllow", true, true];
+	};	
 	default {};
 };

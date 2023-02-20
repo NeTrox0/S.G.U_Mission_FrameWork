@@ -41,7 +41,7 @@ switch (_role) do {
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>SK.sold GRT</t>", {[player,"GRT"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>SJV</t>", {[player,"SJV"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>SJV Lätt</t>", {[player,"SJV2"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>SJV Skarpskytt</t>", {[player,"SJV3"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
+	//	_object addAction ["<t size='1' shadow='1' color='#00ff00'>SJV Skarpskytt</t>", {[player,"SJV3"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Signalist</t>", {[player,"SIGN"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>KSP90</t>", {[player,"KSP90"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>KSP58</t>", {[player,"KSP58"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
@@ -51,7 +51,7 @@ switch (_role) do {
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>GRG Ass</t>", {[player,"GRGA"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>UAV</t>", {[player,"UAV"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Skarpskytt</t>", {[player,"SKRP"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];	
-//		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Prickskytt</t>", {[player,"PRSK"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
+		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Prickskytt</t>", {[player,"PRSK"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 	};
 };
 

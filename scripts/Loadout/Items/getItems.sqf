@@ -23,10 +23,7 @@ removeAllAssignedItems _unit;
 [_unit, _role] execVM "scripts\Loadout\items\assignItems.sqf";
 
 //assign ACE items.
-[_unit, _role] execVM "scripts\Loadout\items\assignAce.sqf";
-
-//assign ACE Survival items.
-[_unit, _camo] execVM "scripts\Loadout\items\assignAceSurvival.sqf";
+[_unit, _role, _camo] execVM "scripts\Loadout\items\assignAce.sqf";
 
 //assign ACE medical items.
 [_unit, _role] execVM "scripts\Loadout\items\assignMedical.sqf";

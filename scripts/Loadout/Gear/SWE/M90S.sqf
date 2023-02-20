@@ -110,7 +110,6 @@ switch (true) do {
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
-	case (_role == "PRSK");
 	case (_role == "SOLD");
 	case (_role == "SOLD2");
 	case (_role == "SOLD3");
