@@ -26,7 +26,7 @@ if ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","G
 
 
 //Add a UAV terminal to Squad leaders. Normal GPS for the other units
-if ((_role == "PLTC") or (_role == "UAV")) then {
+if (_role in ["PLTC","UAV"]) then {
 	_unit linkItem "B_UavTerminal";
 } else {
 	_unit linkItem "ItemGPS";

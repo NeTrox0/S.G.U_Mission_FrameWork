@@ -64,7 +64,7 @@ switch (_primWeapon) do {
 		_unit addPrimaryWeaponItem "sfp_optic_aimpoint";
 	};
 	case ("sfp_ak4d"): {
-		if (_role == in ["SJV3","SKRP"]) then {
+		if (_role in ["SJV3","SKRP"]) then {
 			_unit addPrimaryWeaponItem "sfp_optic_kikarsikte09_4x";
 		} else {
 			_unit addPrimaryWeaponItem "optic_AMS";
