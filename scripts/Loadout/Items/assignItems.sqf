@@ -52,10 +52,12 @@ switch (_role) do {
 	case ("GRPC"); 
 	case ("GRPC2"); 
 	case ("PLTC"); 
-	case ("SIGN"); 
 	case ("VC"): {
 		_unit addMagazine "Laserbatteries";
 		_unit addWeapon "Laserdesignator_03";
+	};
+	case ("SIGN"): {
+		_unit addWeapon "ACE_Vector"; 
 	};
 	case ("PRSK");
 	case ("SKRP");
@@ -64,6 +66,7 @@ switch (_role) do {
 	};
 	default {
 		_unit addWeapon "Binocular"; 
+		
 	};
 };
 
