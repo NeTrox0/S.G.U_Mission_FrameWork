@@ -1,6 +1,6 @@
 /*
 *	Select Items, 
-*	Requires: RHS
+*	Requires: RHS, ACE
 *	
 *	Parameters:
 *	Player,
@@ -79,12 +79,12 @@ switch (_role) do {
 	};
 	case ("FARB"): { 
 //		_unit addItemToBackpack "MineDetector";	//Mine detector is given in "assignACE"	
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+		for "_i" from 1 to 4 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
+//		for "_i" from 1 to 2 do {_unit addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
+//		for "_i" from 1 to 2 do {_unit addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
 	
 		if (isClass(configfile >> "CfgPatches" >> "AMP_Breaching_Charge")) then {
-			for "_i" from 1 to 2 do {_unit addItemToBackpack "AMP_Breaching_Charge_Mag";};
+			for "_i" from 1 to 3 do {_unit addItemToBackpack "AMP_Breaching_Charge_Mag";};
 		};
 	};
 	default {};

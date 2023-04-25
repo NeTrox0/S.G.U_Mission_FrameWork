@@ -16,7 +16,7 @@
 */
 
 
- _unit = _this select 0;
+_unit = _this select 0;
 _role = _this select 1;
 
 //Jet Pilot exit.

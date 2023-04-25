@@ -34,6 +34,7 @@ if (_role == "FARB") then {
 	_unit addItemToBackpack "ACE_M26_Clacker";
 	_unit addItemToBackpack "ACE_wirecutter";
 	_unit addItemToBackpack "ACE_VMH3";
+	for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_green";};
 };
 
 //PRSK gets kestrel and a RangeCard
@@ -46,14 +47,14 @@ switch (_role) do {
 	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2"): {
-		for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
 		_unit addItemToBackpack "ACE_MX2A";
 	};
 	case ("VC"): {
 		for "_i" from 1 to 2 do {_unit addItemToVest "ACE_Chemlight_HiYellow";};
 	};
 	case ("SIGN"): {
-		for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_Chemlight_HiYellow";};
 	};
 	default {};
 };

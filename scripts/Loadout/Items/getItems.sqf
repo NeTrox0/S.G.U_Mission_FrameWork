@@ -29,4 +29,4 @@ removeAllAssignedItems _unit;
 [_unit, _role] execVM "scripts\Loadout\items\assignMedical.sqf";
 
 //assign Traits to the unit.
-[_unit, _role] execVM "scripts\Loadout\items\setAceTraits.sqf";
+[_unit, _role] execVM "scripts\Loadout\items\setTraits.sqf";

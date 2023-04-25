@@ -33,34 +33,23 @@ switch (_role) do {
 	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2");
-	case ("SIGN"): {
-		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
-		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
-	};
-	case ("PRSK"): {
-		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-	};
-	case ("HPIL");
+	case ("SIGN");
 	case ("VC"): {
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
 	};
-	case ("CREW");
-	case ("CREW2");
-	case ("CREW3"):	{
-		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
-	};
+	case ("HPIL");
 	case ("JPIL"): {
 		for "_i" from 1 to 2 do {_unit addItem "SmokeShellYellow";};
 	};
 	case ("SJV");
 	case ("SJV2");
 	case ("SJV3"): {
-		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
 	};	
 	default {
-		for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 	};
 };
 
@@ -104,10 +93,7 @@ switch (_role) do {
 	case ("CREW2");
 	case ("CREW3"): {
 	};
-	case ("PRSK");
-	case ("SJV");
-	case ("SJV2");
-	case ("SJV3"): {
+	case ("PRSK"): {
 		_unit addItemToVest _Frag;
 	};
 	default {
