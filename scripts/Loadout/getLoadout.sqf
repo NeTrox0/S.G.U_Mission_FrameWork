@@ -41,7 +41,7 @@ _gear = [_unit,_camo,_role] call compile preprocessfile "scripts\Loadout\gear\ge
 waitUntil {_gear};
 
 //assign the items that the gear should include
-[_unit,_role,_camo] execVM "scripts\Loadout\items\getItems.sqf";
+[_unit,_role] execVM "scripts\Loadout\items\getItems.sqf";
 
 //assign the weapons.
 [_unit,_role,_camo] execVM "scripts\Loadout\weapons\getWeapons.sqf";

@@ -11,14 +11,12 @@
 
 
 _unit = _this select 0;
+_object = param [1,SGU_Arsenal];
 
 _role = [_unit getVariable "Role"] param [0,"SOLD"];
 _camo = ["Gear_camo", 0] call BIS_fnc_getParamValue;
 
-
-_object = SGU_Arsenal;
 _Ars = false;
-
 
 //systemchat format ["ARS.Roll: %1", _role];
 //systemchat format ["ARS.Cammo: %1", _camo];

@@ -31,7 +31,7 @@ _BackpackSjvArr = ["SGU_Assault_Pack_Medic", "SGU_Assault_Pack_Medic_Tan"];
 _BackpackKitArr = ["SGU_Kitbag", "SGU_Kitbag_Tan"];
 _BackpackKitSjvArr = ["SGU_Kitbag_Medic", "SGU_Kitbag_Medic_Tan"];
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpcArr = ["tfw_ilbe_whip_gr", "tfw_ilbe_whip_coy"];
+_BackpackGrpcArr = ["tfw_ilbe_whip_gr", "tfw_ilbe_whip_coy","tfw_ilbe_DD_gr","tfw_ilbe_DD_coy"];
 
 //***************************************************************//
 

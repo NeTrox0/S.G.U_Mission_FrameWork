@@ -12,7 +12,6 @@
 
 _unit = _this select 0;
 _role = _this select 1;
-_camo = _this select 2;
 
 
 //Add misc items from ACE;
