@@ -33,7 +33,8 @@ _BackpackSjv = "SGU_Assault_Pack_Medic";
 _BackpackKit = "SGU_Kitbag";
 _BackpackKitSjv = "SGU_Kitbag_Medic";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpC = "tfw_ilbe_whip_alpine";
+_BackpackGrpC = "tfw_ilbe_DD_alpine";
+_BackpackSign = "tfw_ilbe_whip_alpine";
 
 //***************************************************************//
 
@@ -92,8 +93,11 @@ switch (_role) do {
 
 //Backpack
 switch (true) do {
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC","SIGN"]): {
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2"]): {
 		_Backpack = _BackpackGrpC;
+	};
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["SIGN","PLTC"]): {
+		_Backpack = _BackpackSign;
 	};
 	case (_role == "SJV"): {
 		_Backpack = _BackpackKitSjv;

@@ -1,6 +1,6 @@
 /*
 *	Select the weapons for unit.
-*	Requires: RHS
+*	Requires: RHS, SFP
 *	
 *	Parameters:
 *	Player
@@ -17,7 +17,11 @@ _role = _this select 1;
 //Add special weapon and attachments
 switch (_role) do {
 	case ("SOLD2"): { 
-		_unit addWeapon "launch_NLAW_F";
+		if (isClass(configfile >> "CfgPatches" >> "sfp_at_launchers")) then {
+			_unit addWeapon "sfp_rb57";
+		} else {
+			_unit addWeapon "launch_NLAW_F";
+		};
 	};
 	case ("ING");
 	case ("SOLD3"): {
@@ -31,9 +35,8 @@ switch (_role) do {
 	};
 	case ("GRG"): {
 		_unit addWeapon "launch_MRAWS_olive_F";
-		_unit addSecondaryWeaponItem "MRAWS_HEAT_F";
 		
-		_unit addItemToBackpack "MRAWS_HEAT_F";
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F"};
 		_unit addItemToBackpack "MRAWS_HE_F";
 	};
 	default {};
