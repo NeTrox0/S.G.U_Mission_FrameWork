@@ -30,7 +30,8 @@ _VestCrew = "V_TacVest_blk";
 _Backpack = "Alpine_Backpack_Compact";
 _BackpackSjv = "Alpine_Backpack_kitbag";
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpC = "tfw_ilbe_whip_alpine";
+_BackpackGrpC = "tfw_ilbe_DD_alpine";
+_BackpackSign = "tfw_ilbe_whip_alpine";
 
 //***************************************************************//
 
@@ -93,8 +94,11 @@ switch (_role) do {
 
 //Backpack
 switch (true) do {
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC","SIGN"]): {
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2"]): {
 		_Backpack = _BackpackGrpC;
+	};
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["SIGN","PLTC"]): {
+		_Backpack = _BackpackSign;
 	};
 	case (_role == "FARB");
 	case (_role == "GRGA");

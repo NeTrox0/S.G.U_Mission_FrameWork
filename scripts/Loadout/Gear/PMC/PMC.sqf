@@ -16,7 +16,8 @@ _HelmetHPilot = "H_PilotHelmetHeli_B";
 
 //UNIFORM
 _Uniform = "";
-_UniformArr = ["U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_BG_Guerilla2_3","U_lxWS_ION_Casual2","U_lxWS_ION_Casual4","LOP_U_PMC_tac_prp_palm","LOP_U_PMC_tac_grn_palm","LOP_U_PMC_tac_red_hi","LOP_U_PMC_tac_blue_hi","LOP_U_PMC_tac_tacky"];
+_UniformArr = ["U_lxWS_ION_Casual2","U_lxWS_ION_Casual4","LOP_U_PMC_tac_prp_palm","LOP_U_PMC_tac_grn_palm","LOP_U_PMC_tac_red_hi","LOP_U_PMC_tac_blue_hi","LOP_U_PMC_tac_tacky"];
+ //Nice but too small inventory "U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_BG_Guerilla2_3"
 _UniformHPilot = "U_I_G_Story_Protagonist_F";
 
 //VEST
@@ -31,7 +32,8 @@ _BackpackSjvArr = ["SGU_Assault_Pack_Medic", "SGU_Assault_Pack_Medic_Tan"];
 _BackpackKitArr = ["SGU_Kitbag", "SGU_Kitbag_Tan"];
 _BackpackKitSjvArr = ["SGU_Kitbag_Medic", "SGU_Kitbag_Medic_Tan"];
 _BackpackUAV = "B_UAV_01_backpack_F";
-_BackpackGrpcArr = ["tfw_ilbe_whip_gr", "tfw_ilbe_whip_coy","tfw_ilbe_DD_gr","tfw_ilbe_DD_coy"];
+_BackpackGrpc = ["tfw_ilbe_DD_gr","tfw_ilbe_DD_coy"];
+_BackpackSign = ["tfw_ilbe_whip_gr", "tfw_ilbe_whip_coy"];
 
 //***************************************************************//
 
@@ -75,9 +77,12 @@ switch (_role) do {
 
 //Backpack
 switch (true) do {
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC","SIGN"]): {
-		_Backpack = selectRandom _BackpackGrpCArr;
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2"]): {
+		_Backpack = selectRandom _BackpackGrpC;
 	};
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["SIGN","PLTC"]): {
+		_Backpack = selectRandom _BackpackSign;
+	};	
 	case (_role == "SJV"): {
 		_Backpack = selectRandom _BackpackKitSjvArr;
 	};

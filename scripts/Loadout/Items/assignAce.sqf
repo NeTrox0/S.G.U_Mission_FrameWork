@@ -21,15 +21,30 @@ _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
 
 
-//Engineer items like Trench tool.
-if (_role in ["ING","CREW3"]) then {
-	_unit addItemToBackpack "ACE_EntrenchingTool";
-};
+//Give Everyone Entrenching tool
+switch (_role) do {
+	case ("HPIL");
+	case ("JPIL"): {
+	};
+	case ("PLTC");
+	case ("GRPC");
+	case ("GRPC2");
+	case ("GRT");
+	case ("SIGN");
+	case ("ING");
+	case ("CREW3");
+	case ("FARB"): {
+		_unit addItemToBackpack "ACE_EntrenchingTool";
+	};
+	default {
+		_unit addItemToUniform "ACE_EntrenchingTool";
+	};
+};	
+
 
 //FARB items like EOD and explosives
 if (_role == "FARB") then {
 	_unit addItemToBackpack "ACE_DefusalKit";
-	_unit addItemToBackpack "ACE_EntrenchingTool";
 	_unit addItemToBackpack "ACE_M26_Clacker";
 	_unit addItemToBackpack "ACE_wirecutter";
 	_unit addItemToBackpack "ACE_VMH3";
