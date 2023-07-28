@@ -26,6 +26,7 @@ if (_role == "JPIL") exitWith {};
 //1: Weapon
 switch (_role) do {
 	case ("GRPC");
+	case ("STFC");
 	case ("GRT"): {
 		_unit addWeapon "rhs_weap_mk18_m320";
 	};
@@ -35,7 +36,6 @@ switch (_role) do {
 	case ("KSP58"): {
 		_unit addWeapon "rhs_weap_m240G";
 	};	
-	case ("SJV3");
 	case ("SKRP"): {
 		_unit addWeapon "rhs_weap_sr25_ec";
 	};
@@ -44,9 +44,6 @@ switch (_role) do {
 	case ("CREW2");
 	case ("CREW3"): {
 		_unit addWeapon "rhs_weap_m4_carryhandle";
-	};
-	case ("PRSK"):{
-		_unit addWeapon "rhs_weap_XM2010";
 	};
 	case ("HPIL"): {
 		_unit addWeapon "SMG_05_F";
@@ -68,12 +65,8 @@ switch (_weapon) do {
 		_unit addItemToVest "optic_NVS";
 	};
 	case ("rhs_weap_sr25_ec"): {
-		if (_role == "SJV3") then {
-			_unit addPrimaryWeaponItem "rhsusf_acc_su230a";
-		} else {
 			_unit addPrimaryWeaponItem "optic_AMS";
 			_unit addItemToBackpack "optic_NVS";
-		};
 	};
 	case ("rhs_weap_m4_carryhandle"): {
 		_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
@@ -99,12 +92,7 @@ switch (_weapon) do {
 		_unit addItem "muzzle_snds_l";
 	};
 	case ("rhs_weap_sr25_ec"): {
-		if (_role == "SJV3") then {
-			_unit addItemToVest "rhsusf_acc_aac_762sdn6_silencer";
-		} else {
-			_unit addItemToBackpack "rhsusf_acc_aac_762sdn6_silencer";
-		};
-		
+		_unit addItemToBackpack "rhsusf_acc_aac_762sdn6_silencer";
 	};
 	default {
 		_unit addItem "rhsusf_acc_nt4_black";
@@ -133,6 +121,7 @@ _unit addPrimaryWeaponItem "acc_pointer_ir";
 //3: Ammo
 //Primary Ammo
 switch (_role) do {
+	case ("STFC");
 	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2"): {
@@ -145,7 +134,6 @@ switch (_role) do {
 //		for "_i" from 1 to 7 do {_unit addItemToVest "rhsusf_100Rnd_762x51_m80a1epr";};
 		for "_i" from 1 to 8 do {_unit addItemToVest "sfp_100Rnd_762x51_ksp58";};
 	};
-	case ("SJV3");
 	case ("SKRP"): {
 		for "_i" from 1 to 6 do {_unit addItemToVest "rhsusf_20Rnd_762x51_SR25_m118_Special_Mag";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_20Rnd_762x51_SR25_m993_Mag";};
@@ -155,9 +143,6 @@ switch (_role) do {
 	case ("CREW2");
 	case ("CREW3"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG";};
-	};
-	case ("PRSK"): {
-		for "_i" from 1 to 10 do {_unit addItemToVest "rhsusf_5Rnd_300winmag_xm2010";};
 	};
 	case ("HPIL"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02_Tracer_Red";};
@@ -170,6 +155,7 @@ switch (_role) do {
 //UBGL Ammo
 switch (_role) do {
 	case ("GRPC"); 
+	case ("STFC");
 	case ("GRT"): {
 		for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 		for "_i" from 1 to 4 do {_unit addItemToBackpack "UGL_FlareCIR_F";};

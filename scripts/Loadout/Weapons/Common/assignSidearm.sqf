@@ -19,9 +19,6 @@ if (isClass(configfile >> "CfgPatches" >> "rhsusf_c_weapons")) then {
 	_unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";		
 
 	switch (_role) do {
-		case ("PRSK"): { 
-			for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_17Rnd_9x19_JHP";};
-		};
 		case ("JPIL"): { 
 			_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";	
 		};

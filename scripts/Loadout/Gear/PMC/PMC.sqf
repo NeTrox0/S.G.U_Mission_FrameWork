@@ -33,7 +33,7 @@ _BackpackKitArr = ["SGU_Kitbag", "SGU_Kitbag_Tan"];
 _BackpackKitSjvArr = ["SGU_Kitbag_Medic", "SGU_Kitbag_Medic_Tan"];
 _BackpackUAV = "B_UAV_01_backpack_F";
 _BackpackGrpc = ["tfw_ilbe_DD_gr","tfw_ilbe_DD_coy"];
-_BackpackSign = ["tfw_ilbe_whip_gr", "tfw_ilbe_whip_coy"];
+_BackpackStfc = ["tfw_ilbe_whip_gr", "tfw_ilbe_whip_coy"];
 
 //***************************************************************//
 
@@ -80,14 +80,13 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2"]): {
 		_Backpack = selectRandom _BackpackGrpC;
 	};
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["SIGN","PLTC"]): {
-		_Backpack = selectRandom _BackpackSign;
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["STFC","STFC2","STFC3","PLTC"]): {
+		_Backpack = selectRandom _BackpackStfc;
 	};	
 	case (_role == "SJV"): {
 		_Backpack = selectRandom _BackpackKitSjvArr;
 	};
 	case (_role == "SJV2");
-	case (_role == "SJV3");
 	case (_role == "CREW2"): {
 		_Backpack = selectRandom _BackpackSjvArr;
 	};
@@ -98,7 +97,6 @@ switch (true) do {
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
-	case (_role == "PRSK");
 	case (_role == "HPIL"): {
 		_Backpack = "";
 	};

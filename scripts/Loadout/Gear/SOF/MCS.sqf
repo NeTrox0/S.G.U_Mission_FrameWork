@@ -31,7 +31,7 @@ _Backpack = "Alpine_Backpack_Compact";
 _BackpackSjv = "Alpine_Backpack_kitbag";
 _BackpackUAV = "B_UAV_01_backpack_F";
 _BackpackGrpC = "tfw_ilbe_DD_alpine";
-_BackpackSign = "tfw_ilbe_whip_alpine";
+_BackpackStfc = "tfw_ilbe_whip_alpine";
 
 //***************************************************************//
 
@@ -97,8 +97,8 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2"]): {
 		_Backpack = _BackpackGrpC;
 	};
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["SIGN","PLTC"]): {
-		_Backpack = _BackpackSign;
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["STFC","STFC2","STFC3","PLTC"]): {
+		_Backpack = _BackpackStfc;
 	};
 	case (_role == "FARB");
 	case (_role == "GRGA");
@@ -109,7 +109,6 @@ switch (true) do {
 	case (_role == "UAV"): {
 		_Backpack = _BackpackUAV;
 	};
-	case (_role == "PRSK");
 	case (_role == "SOLD");
 	case (_role == "SOLD2");
 	case (_role == "SOLD3");

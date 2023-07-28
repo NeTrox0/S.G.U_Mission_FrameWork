@@ -15,8 +15,8 @@ _camo = _this select 2;
 
 removeAllWeapons _unit;
 
-//Special For PRSK AceGunbag
-//if (_role == "PRSK") then {
+//Special For ??? AceGunbag
+//if (_role == "????") then {
 //	[_unit] execVM "scripts\Loadout\weapons\Common\assignAceGunbag.sqf";
 //	sleep 0.1;
 //};

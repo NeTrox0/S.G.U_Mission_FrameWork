@@ -30,9 +30,10 @@ _Backpack = "SGU_Assault_Pack_Tan";
 _BackpackSjv = "SGU_Assault_Pack_Medic_Tan";
 _BackpackKit = "SGU_Kitbag_Tan";
 _BackpackKitSjv = "SGU_Kitbag_Medic_Tan";
+_BackpackGRGA = "sfp_backpack_grg_loader";
 _BackpackUAV = "B_UAV_01_backpack_F";
 _BackpackGrpC = "tfw_ilbe_DD_coy";
-_BackpackSign = "tfw_ilbe_whip_coy";
+_BackpackStfc = "tfw_ilbe_whip_coy";
 
 //***************************************************************//
 
@@ -92,18 +93,19 @@ switch (true) do {
 	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2"]): {
 		_Backpack = _BackpackGrpC;
 	};
-	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["SIGN","PLTC"]): {
-		_Backpack = _BackpackSign;
+	case ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["STFC","STFC2","STFC3","PLTC"]): {
+		_Backpack = _BackpackStfc;
 	};
 	case (_role == "SJV"): {
 		_Backpack = _BackpackKitSjv;
 	};
 	case (_role == "SJV2");
-	case (_role == "SJV3");
 	case (_role == "CREW2"): {
 		_Backpack = _BackpackSjv;
 	};
-	case (_role == "GRGA");
+	case (_role == "GRGA"): {
+		_Backpack = _BackpackGRGA;
+	};
 	case (_role == "FARB"): {
 		_Backpack = _BackpackKit;
 	};	

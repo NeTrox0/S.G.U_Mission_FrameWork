@@ -26,6 +26,7 @@ if (_role == "JPIL") exitWith {};
 
 //1: Weapon
 switch (_role) do {
+	case ("STFC");
 	case ("GRPC");
 	case ("GRT"): {
 		_unit addWeapon "sfp_ak5c_m203";
@@ -36,9 +37,8 @@ switch (_role) do {
 	case ("KSP58"): {
 		_unit addWeapon "sfp_ksp58f";
 	};
-	case ("SJV3");
-	case ("SKRP");
-	case ("PRSK"): {
+	case ("STFC3");
+	case ("SKRP"): {
 		_unit addWeapon "sfp_ak4d";
 	};
 	case ("VC");
@@ -59,16 +59,14 @@ _primWeapon = primaryWeapon _unit;
 
 //Optic
 switch (_primWeapon) do {
+	case ("LMG_03_F");
 	case ("sfp_ksp58f");
 	case ("sfp_ak5dmk2"): {
 		_unit addPrimaryWeaponItem "sfp_optic_aimpoint";
 	};
 	case ("sfp_ak4d"): {
-		if (_role in ["SJV3","SKRP"]) then {
-			_unit addPrimaryWeaponItem "sfp_optic_kikarsikte09_4x";
-		} else {
-			_unit addPrimaryWeaponItem "optic_AMS";
-		};
+		//_unit addPrimaryWeaponItem "optic_AMS";
+		_unit addPrimaryWeaponItem "sfp_optic_kikarsikte09_4x";
 		_unit addItemToBackpack "optic_NVS";
 	};	
 	default {
@@ -111,7 +109,9 @@ switch (_primWeapon) do {
 switch (_role) do {
 	case ("PLTC");
 	case ("GRPC");
-	case ("GRPC2"): {
+	case ("GRPC2");
+	case ("STFC");
+	case ("STFC2"): {
 		for "_i" from 1 to 8 do {_unit addItemToVest "sfp_30Rnd_556x45_Stanag_tracer_plastic";};
 	};
 	case ("KSP90"): {
@@ -122,9 +122,8 @@ switch (_role) do {
 		for "_i" from 1 to 3 do {_unit addItemToVest "sfp_100Rnd_762x51_ksp58";};
 		for "_i" from 1 to 4 do {_unit addItemToBackpack "sfp_100Rnd_762x51_ksp58";};
 	};
-	case ("SJV3");
-	case ("SKRP");
-	case ("PRSK"): {
+	case ("STFC3");
+	case ("SKRP"): {
 		for "_i" from 1 to 6 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4_ap";};
 		//for "_i" from 1 to 2 do {_unit addItemToVest "sfp_20Rnd_762x51_ak4_tracer";};
@@ -144,6 +143,7 @@ switch (_role) do {
 //UBGL Ammo
 switch (_role) do {
 	case ("GRPC"); 
+	case ("STFC");
 	case ("GRT"): {
 		for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 		for "_i" from 1 to 4 do {_unit addItemToBackpack "UGL_FlareCIR_F";};
