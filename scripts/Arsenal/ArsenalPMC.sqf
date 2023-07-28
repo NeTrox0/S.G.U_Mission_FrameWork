@@ -14,6 +14,8 @@ _object = _this select 1;
 
 switch (_role) do {
 	case ("STFC");
+	case ("STFC2");
+	case ("STFC3");
 	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2"): {
