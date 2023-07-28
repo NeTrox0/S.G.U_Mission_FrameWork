@@ -16,7 +16,7 @@ _role = _this select 1;
 
 //Add special weapon and attachments
 switch (_role) do {
-	case ("SOLD3"): { 
+	case ("SOLD3"): {
 		if (isClass(configfile >> "CfgPatches" >> "sfp_at_launchers")) then {
 			_unit addWeapon "sfp_rb57";
 		} else {
