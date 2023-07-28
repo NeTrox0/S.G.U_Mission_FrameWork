@@ -26,6 +26,7 @@ _type = selectRandom ["AR","AK"];
 //1: Weapon
 switch (_role) do {
 	case ("GRPC");
+	case ("STFC");
 	case ("GRT"): {
 		if (_type == "AR") then {
 			_unit addWeapon "rhs_weap_mk18_m320";
@@ -36,7 +37,6 @@ switch (_role) do {
 	case ("SKRP"): {
 		_unit addWeapon selectRandom ["gm_g3a4_ebr_oli","gm_g3a4_ebr_blk"];
 	};
-	case ("PRSK");
 	case ("HPIL"): {
 		_unit addWeapon "SMG_05_F";
 	};
@@ -108,6 +108,7 @@ _unit addPrimaryWeaponItem "acc_pointer_ir";
 //Primary Ammo
 switch (_role) do {
 	case ("GRPC");
+	case ("STFC");
 	case ("GRPC2"): {
 		if (_type == "AR") then {
 			for "_i" from 1 to 8 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red";};
@@ -119,8 +120,7 @@ switch (_role) do {
 		for "_i" from 1 to 6 do {_unit addItemToVest "gm_20Rnd_762x51mm_AP_DM151_g3_blk";};
 		for "_i" from 1 to 2 do {_unit addItem "gm_20Rnd_762x51mm_B_T_DM21A2_g3_blk";};
 	};
-	case ("HPIL");
-	case ("PRSK"): {
+	case ("HPIL"): {
 		for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_9x21_Mag_SMG_02_Tracer_Red";};
 	};
 	default {
@@ -135,6 +135,7 @@ switch (_role) do {
 //UBGL Ammo
 switch (_role) do {
 	case ("GRPC"); 
+	case ("STFC");
 	case ("GRT"): {
 		if (_type == "AR") then {
 			for "_i" from 1 to 12 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};

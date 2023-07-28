@@ -19,7 +19,7 @@ _unit linkItem "ItemCompass";
 
 //IF TFAR is loaded and unit is a TL or SL do not give them any Watch. TFAR_MICRODAGR will take its place!
 
-if ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC"]) then {
+if ((isClass(configfile >> "CfgPatches" >> "tfar_core")) and _role in ["GRPC","GRPC2","PLTC","STFC","STFC2","STFC3"]) then {
 } else {
 	_unit linkItem "ItemWatch";
 };
@@ -36,9 +36,8 @@ if (_role in ["PLTC","UAV"]) then {
 //Add NVG
 switch (_role) do {
 	case ("JPIL"): {};
-	case ("SJV3");
-	case ("SKRP");
-	case ("PRSK"): {
+	case ("STFC3");
+	case ("SKRP"): {
 		_unit addItemToBackpack "rhsusf_ANPVS_15";
 	};	
 	default {
@@ -49,19 +48,21 @@ switch (_role) do {
 
 //Add Binos. "AddWeapon" Because Binos can hurt you.. :)
 switch (_role) do {
+	case ("VC");
+	case ("PLTC");
 	case ("GRPC"); 
-	case ("GRPC2"); 
-	case ("PLTC"); 
-	case ("VC"): {
+	case ("GRPC2"): {
 		_unit addMagazine "Laserbatteries";
 		_unit addWeapon "Laserdesignator_03";
+		_unit addItemToBackpack "ACE_MX2A";
 	};
-	case ("SIGN"): {
+	case ("STFC");
+	case ("STFC2");
+	case ("STFC3"): {
 		_unit addWeapon "ACE_Vector"; 
 	};
-	case ("PRSK");
-	case ("SKRP");
-	case ("SJV3"): {
+	case ("GRGA");
+	case ("SKRP"): {
 		_unit addWeapon "Rangefinder";
 	};
 	default {

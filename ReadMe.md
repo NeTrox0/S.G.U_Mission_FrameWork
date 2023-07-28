@@ -27,29 +27,26 @@ By Trox
 - PLTC
 - GRPC (GRT)
 - GRPC2
+- STFC (GRT) - (samma som GRPC)
+- STFC - (samma som GRPC2)
+- STFC3 - (Skarpskytte vapen)
 
 ### Group Roles
 
-- SIGN (Signalist)
-- SJV
-- SJV2 (SJV Lätt)
-- SJV3 (SJV & Skarpskytt)
-- KSP90
-- KSP58
-- GRG
-- GRT
 - SOLD (Sk.sold)
 - SOLD2 (sk.sold AT4)
 - SOLD3 (sk.sold RB57)
-- ING (Ingenjör)
-- FARB (Fältarbetare)
+- GRT (sk.sold GRT)
+- SJV
+- SJV2 (SJV Lätt)
+- KSP90
+- KSP58
+- GRG
+- GRGA (GRG Ass)
 - SKRP (Skarpskytt)
+- FARB (Fältarbetare)
+- ING (Ingenjör)
 - UAV
-- PRSK (Prickskytt)
-
-### Assist Roles
-
-- GRGA (GRG ASS)
 
 ### Pilots
 

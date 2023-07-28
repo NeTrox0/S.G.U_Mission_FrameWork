@@ -1,6 +1,6 @@
 /*
 *	Select Items, 
-*	Requires: ACRE2 or TFAR
+*	Requires: TFAR
 *	
 *	Parameters:
 *	Player,
@@ -15,23 +15,11 @@ _role = _this select 1;
 switch (true) do {
 	//Check if TFAR is loaded.
 	case (isClass(configfile >> "CfgPatches" >> "tfar_core")): {
-		//Add Radio (TFAR) fall all units.
-		switch (_role) do {
-			case ("SIGN");
-			case ("JPIL");
-			case ("HPIL"): {
-				_unit linkItem "TFAR_anprc152";
-			};
-			case ("VC");
-			case ("GRPC");
-			case ("GRPC2");
-			case ("PLTC"): {
-				_unit linkItem "TFAR_microdagr";
-				_unit linkItem "TFAR_anprc152";
-			};
-			default {
-				_unit linkItem "TFAR_rf7800str";
-			};
+		//Add Radio (TFAR) for all all units.
+		_unit linkItem "TFAR_anprc152";
+
+		if (_role in ["GRPC","GRPC2","PLTC","STFC","STFC2","STFC3","VC"]) then {
+			_unit linkItem "TFAR_microdagr";
 		};
 	};
 	default {

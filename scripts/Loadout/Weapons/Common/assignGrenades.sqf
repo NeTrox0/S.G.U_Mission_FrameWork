@@ -33,7 +33,9 @@ switch (_role) do {
 	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2");
-	case ("SIGN");
+	case ("STFC");
+	case ("STFC2");
+	case ("STFC3");
 	case ("VC"): {
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
@@ -43,8 +45,7 @@ switch (_role) do {
 		for "_i" from 1 to 2 do {_unit addItem "SmokeShellYellow";};
 	};
 	case ("SJV");
-	case ("SJV2");
-	case ("SJV3"): {
+	case ("SJV2"): {
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
 		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
 	};	
@@ -56,7 +57,6 @@ switch (_role) do {
 
 //Utility
 switch (_role) do {
-	case ("PRSK");
 	case ("HPIL");
 	case ("JPIL");
 	case ("VC");
@@ -76,7 +76,9 @@ switch (_role) do {
 	};
 	case ("GRPC");
 	case ("GRPC2");
-	case ("SIGN");
+	case ("STFC");
+	case ("STFC2");
+	case ("STFC3");
 	case ("PLTC"): {
 		for "_i" from 1 to 2 do {_unit addItemToBackpack "B_IR_Grenade";};
 	};
@@ -92,9 +94,6 @@ switch (_role) do {
 	case ("CREW");
 	case ("CREW2");
 	case ("CREW3"): {
-	};
-	case ("PRSK"): {
-		_unit addItemToVest _Frag;
 	};
 	default {
 		for "_i" from 1 to 2 do {_unit addItemToVest _Frag;};
