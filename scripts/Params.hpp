@@ -5,11 +5,16 @@ class Params {
         texts[]={""};
         default = 0;
     };
-	
 	class Gear_Camo { 
-		title = "Camo of the gear used by players";
-        values[]={0, 1, 2, 3, 4, 5, 6};
-        texts[]={"M90", "M90K", "M90S", "MC", "MCT", "MCS", "PMC"};
+		title = "Camo of the uniform used by players";
+        values[]={0, 1, 2, 3, 4, 5, 6, 7};
+        texts[]={"M90", "M90K", "M90S", "MC", "MCT", "MCS", "PMC", "MC SOF"};
+        default = 0;
+    };
+	class Gear_Wpn { 
+		title = "Type of weapons to be used by the players";
+        values[]={0, 1, 2, 3};
+        texts[]={"MX A3", "AK5 SFP", "MK18 RHS", "PMC RHS"};
         default = 0;
     };
 /*		

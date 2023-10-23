@@ -16,7 +16,8 @@ _role = _this select 1;
 
 //Add misc items from ACE;
 _unit addItemToUniform "ACE_EarPlugs";
-_unit addItemToUniform "ACE_CableTie";
+for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_CableTie";};
+_unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "ACE_Flashlight_XL50";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
 
@@ -24,8 +25,7 @@ _unit addItemToUniform "ACE_IR_Strobe_Item";
 //Give Everyone Entrenching tool
 switch (_role) do {
 	case ("HPIL");
-	case ("JPIL"): {
-	};
+	case ("JPIL"): {};
 	case ("PLTC");
 	case ("GRPC");
 	case ("GRPC2");

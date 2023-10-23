@@ -26,12 +26,13 @@ if (isClass(configfile >> "CfgPatches" >> "ace_medical")) then {
 			for "_i" from 1 to 6 do {_unit addItemToBackpack "ACE_splint";};
 			for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_morphine";};
 			for "_i" from 1 to 10 do {_unit addItemToBackpack "ACE_epinephrine";};
-			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_bodyBag";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_adenosine";};
 			for "_i" from 1 to 6 do {_unit addItemToBackpack "ACE_salineIV_500";};
 			for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_salineIV_250";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
+//			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_bodyBag";};
 			_unit addItemToBackpack "ACE_surgicalKit";
+//			for "_i" from 1 to 40 do {_unit addItemToBackpack "ACE_suture";};			
 //			_unit addItemToBackpack "ACE_personalAidKit";
 		};
 		case ("SJV2"); //SJV Lätt
@@ -44,18 +45,19 @@ if (isClass(configfile >> "CfgPatches" >> "ace_medical")) then {
 			for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_splint";};
 			for "_i" from 1 to 6 do {_unit addItemToBackpack "ACE_morphine";};
 			for "_i" from 1 to 8 do {_unit addItemToBackpack "ACE_epinephrine";};
-			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_bodyBag";};
 			_unit addItemToBackpack "ACE_adenosine";
 			for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_500";};
 			for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_salineIV_250";};
 			_unit addItemToBackpack "ACE_salineIV";
+//DSXZ			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_bodyBag";};
 			_unit addItemToBackpack "ACE_surgicalKit";
+//			for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_suture";};
 //			_unit addItemToBackpack "ACE_personalAidKit";
 		};
 		default {
 			for "_i" from 1 to 6 do {_unit addItemToUniform "ACE_elasticBandage";};
 			for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_tourniquet";};
-			for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_splint";};
+			_unit addItemToUniform "ACE_splint";
 			//_unit addItemToUniform "ACE_epinephrine";
 			_unit addItemToUniform "ACE_morphine";
 			_unit addItemToUniform "ACE_salineIV_500";

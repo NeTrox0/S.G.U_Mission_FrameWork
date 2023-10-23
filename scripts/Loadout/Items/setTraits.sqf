@@ -35,7 +35,7 @@ switch (_role) do {
 	case ("CREW3"): {
 		//Set the unit as an engineer
 		_unit setUnitTrait ["engineer", true];
-		_unit setVariable ["ACE_isEngineer", 1];
+		_unit setVariable ["ACE_isEngineer", 1, true];
 	};
 	case ("FARB"): {
 		//Set the unit as an EOD.
