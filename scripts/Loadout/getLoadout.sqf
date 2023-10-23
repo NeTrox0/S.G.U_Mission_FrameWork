@@ -58,9 +58,8 @@ waitUntil {_gear};
 
 Systemchat selectRandom [
 	"Utrustad å klar. Lycka till!"
-	,"Water shapes it's course according to the ground over witch it flows. A soldier works out his victory in relation to the foe the is facing. 
-Therefore, just as water retains no constant shape.	In warfare, there are no constant conditions. - The Art of War. Sabaton"
-	,"Vilja och självdisciplin är att i alla lägen och utan hänsyn till dig själv göra ditt bästa. - SOLDF"
+	,"Water shapes it's course according to the ground over witch it flows. A soldier works out his victory in relation to the foe the is facing. Therefore, just as water retains no constant shape. In warfare, there are no constant conditions. - The Art of War. Sabaton"
+	,"Vilja och självdisciplin är att i alla lägen och utan hänsyn till dig själv göra ditt bästa. Hur svåra och farliga omständigheterna än blir så måste dina kamrater lita på att du gör ditt jobb. - SOLDF"
 	,"Självförtroende byggs på kunskap, färdighet, förståelse och erfarenhet. För att uppnå detta krävs målmedveten och många gånger hård träning. - SOLDF"
 ];
 
