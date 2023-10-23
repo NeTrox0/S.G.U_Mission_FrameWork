@@ -36,12 +36,8 @@ if (_role in ["PLTC","UAV"]) then {
 //Add NVG
 switch (_role) do {
 	case ("JPIL"): {};
-	case ("STFC3");
-	case ("SKRP"): {
-		_unit addItemToBackpack "rhsusf_ANPVS_15";
-	};	
 	default {
-		_unit addItemToVest "rhsusf_ANPVS_15";
+		_unit linkItem "rhsusf_ANPVS_15";
 	};
 };
 

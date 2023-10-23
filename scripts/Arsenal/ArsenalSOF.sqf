@@ -32,26 +32,17 @@ switch (_role) do {
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Hkp Pilot</t>", {[player,"HPIL"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Jet Pilot</t>", {[player,"JPIL"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 	};
-	case ("VC");
-	case ("CREW");
-	case ("CREW2");
-	case ("CREW3"): {
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Vagn.C</t>", {[player,"VC"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Besättning</t>", {[player,"CREW"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Besättning Sjv</t>", {[player,"CREW2"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Besättning Ing</t>", {[player,"CREW3"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
-	};
 	default {
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Sk.sold</t>", {[player,"SOLD"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Sk.sold AT4</t>", {[player,"SOLD2"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Sk.sold RB57</t>", {[player,"SOLD3"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>SK.sold GRT</t>", {[player,"GRT"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Sjv</t>", {[player,"SJV"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
+//		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Sjv</t>", {[player,"SJV"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Sjv Lätt</t>", {[player,"SJV2"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Ksp90</t>", {[player,"KSP90"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
-		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Ksp58</t>", {[player,"KSP58"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
+		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Ksp</t>", {[player,"KSP90"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
+//		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Ksp58</t>", {[player,"KSP58"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Grg</t>", {[player,"GRG"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];
 		_object addAction ["<t size='1' shadow='1' color='#00ff00'>Grg Ass</t>", {[player,"GRGA"] execVM "scripts\Loadout\getLoadout.sqf"},[],1,false,true,"","_this distance _target < 15"];

@@ -1,6 +1,6 @@
 /*
 *	Select the gear for unit, using some parameters for Cammo
-*	Requires: ACE, ACEX, RHS, SAM3, SFP, ACRE2 or TFAR
+*	Requires: 
 *	
 *	Parameters: 
 *	_unit, 
@@ -15,25 +15,29 @@ _gear = false;
 
 _unit =  _this select 0;
 _role = param [1, "0"];
-_camo = param [2, 9];
-//systemchat format ["Cammo: %1", _camo];
+//_camo = param [2, 0];
 //systemchat format ["Roll: %1", _role];
+//systemchat format ["Cammo: %1", _camo];
 
 
 if (side player == sideLogic) exitWith {systemchat "No Gear for Virtual Zeus";};
 
 
-if (_camo == 9) then {
-	_camo = ["Gear_Camo", 0] call BIS_fnc_getParamValue;
-	//systemchat format ["LOG.2.Cammo: %1", _camo];
-};
+_camo = ["Gear_Camo", 0] call BIS_fnc_getParamValue;
+//systemchat format ["LOG.2.Cammo: %1", _camo];
+
+_wpn = ["Gear_Wpn", 0] call BIS_fnc_getParamValue;
+//systemchat format ["LOG.2.Wpn: %1", _wpn];
+
 
 //if no role is set try to get a role from the unit variable
 if (_role == "0") then {
-	//Get the set role for the unit. if no role variable is set default to role SOLD
 	_role = [_unit getVariable "Role"] param [0, "SOLD"];
 	//systemchat format ["LOG.2.Roll: %1", _role];
 };
+
+
+
 
 
 //Give unit new uniform vest and backpack.
@@ -44,10 +48,19 @@ waitUntil {_gear};
 [_unit,_role] execVM "scripts\Loadout\items\getItems.sqf";
 
 //assign the weapons.
-[_unit,_role,_camo] execVM "scripts\Loadout\weapons\getWeapons.sqf";
+[_unit,_role,_wpn] execVM "scripts\Loadout\weapons\getWeapons.sqf";
 
 
 //assign insignia 
 [_unit,"SGU_Insignia"] call BIS_fnc_setUnitInsignia;
 
-Systemchat "Utrustad å klar. Lycka till!";
+//Systemchat "Utrustad å klar. Lycka till!";
+
+Systemchat selectRandom [
+	"Utrustad å klar. Lycka till!"
+	,"Water shapes it's course according to the ground over witch it flows. A soldier works out his victory in relation to the foe the is facing. 
+Therefore, just as water retains no constant shape.	In warfare, there are no constant conditions. - The Art of War. Sabaton"
+	,"Vilja och självdisciplin är att i alla lägen och utan hänsyn till dig själv göra ditt bästa. - SOLDF"
+	,"Självförtroende byggs på kunskap, färdighet, förståelse och erfarenhet. För att uppnå detta krävs målmedveten och många gånger hård träning. - SOLDF"
+];
+

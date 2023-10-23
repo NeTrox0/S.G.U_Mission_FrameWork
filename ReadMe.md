@@ -28,7 +28,7 @@ By Trox
 - GRPC (GRT)
 - GRPC2
 - STFC (GRT) - (samma som GRPC)
-- STFC - (samma som GRPC2)
+- STFC2 - (samma som GRPC2)
 - STFC3 - (Skarpskytte vapen)
 
 ### Group Roles
